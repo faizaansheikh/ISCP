@@ -1,48 +1,13 @@
-import React from 'react';
-import { Grid, Paper } from '@mui/material';
-import { makeStyles } from '@mui/styles';
+import * as React from 'react';
+import Avatar from '@mui/material/Avatar';
+import Stack from '@mui/material/Stack';
 
-const useStyles = makeStyles((theme) => ({
-  sideBar: {
-    backgroundColor: '#f5f5f5',
-    height: '100vh',
-    padding: theme.spacing(2),
-  },
-  topBar: {
-    backgroundColor: '#f5f5f5',
-    padding: theme.spacing(2),
-  },
-  content: {
-    padding: theme.spacing(2),
-  },
-}));
-
-function MixedLayout() {
-  const classes = useStyles();
-
+export default function ImageAvatars() {
   return (
-    <Grid container>
-      <Grid item xs={2}>
-        <Paper className={classes.sideBar}>
-          {/* Side Bar content */}
-        </Paper>
-      </Grid>
-      <Grid item xs={10}>
-        <Grid container direction="column">
-          <Grid item>
-            <Paper className={classes.topBar}>
-              {/* Top Bar content */}
-            </Paper>
-          </Grid>
-          <Grid item>
-            <Paper className={classes.content}>
-              {/* Main content */}
-            </Paper>
-          </Grid>
-        </Grid>
-      </Grid>
-    </Grid>
+    <Stack direction="row" spacing={2}>
+      <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
+      <Avatar alt="Travis Howard" src="/static/images/avatar/2.jpg" />
+      <Avatar alt="Cindy Baker" src="/static/images/avatar/3.jpg" />
+    </Stack>
   );
 }
-
-export default MixedLayout;
