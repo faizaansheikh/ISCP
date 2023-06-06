@@ -5,6 +5,7 @@ function App() {
   return (
     <>
     <MixedLayout/>
+    <h1>Hello world</h1>
     </>
   );
 }
