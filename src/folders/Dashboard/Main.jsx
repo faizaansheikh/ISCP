@@ -7,7 +7,7 @@ function Main() {
   const isMobile = useMediaQuery("(min-width:600px)");
 
   return <>{isMobile ? <Sidebar /> : <ResponsiveSideBar />}
-  <Setup/>
+  {/* <Setup/> */}
   </>;
 }
 

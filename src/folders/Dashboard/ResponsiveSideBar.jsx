@@ -16,13 +16,16 @@ import MailIcon from '@mui/icons-material/Mail';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
+import Setup from '../Setups/Setup';
+import Results from '../Results/Results';
+import { Button } from '@mui/material';
 
-const drawerWidth = 240;
+const drawerWidth = 270;
 
 function ResponsiveDrawer(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
-
+  const [menuData, setMenuData] = React.useState("setup");
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
@@ -32,16 +35,52 @@ function ResponsiveDrawer(props) {
       <Toolbar />
       <Divider />
       <List>
-        {["Segmentation Setups", "Segmentation Results"].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
+      <Box sx={{ overflow: "auto", bgcolor: "#398585" }}>
+          <List>
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                flexDirection: "column",
+              }}
+            >
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  p: "10px",
+                }}
+              >
+                <InboxIcon />
+                <Button
+                  sx={{ color: "white" }}
+                  onClick={() => setMenuData("setup")}
+                >
+                  Segmentation Setups
+                </Button>
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  p: "10px",
+                }}
+              >
+                <InboxIcon />
+                <Button
+                  sx={{ color: "white" }}
+                  onClick={() => setMenuData("result")}
+                >
+                  Segmentation Results
+                </Button>
+              </Box>
+            </Box>
+          </List>
+          <Divider />
+        </Box>
       </List>
       <Divider />
       {/* <List>
@@ -123,6 +162,8 @@ function ResponsiveDrawer(props) {
         sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
       >
         <Toolbar />
+        {menuData == "setup" && <Setup />}
+        {menuData == "result" && <Results />}
       </Box>
     </Box>
   );
