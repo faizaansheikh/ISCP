@@ -1,5 +1,5 @@
 import React from 'react'
-import Main from '../Dashboard/Main'
+// import Main from '../Dashboard/Main'
 
 function Setup() {
   return (
