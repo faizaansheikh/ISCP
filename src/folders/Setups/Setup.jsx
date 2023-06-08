@@ -14,10 +14,9 @@ import {
   Switch,
   TextField,
   Typography,
+  CssTextField
 } from "@mui/material";
 import Table from "../Setups/Table";
-=========
-import React from 'react'
 // import Main from '../Dashboard/Main'
 
 function Setup() {
