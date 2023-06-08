@@ -15,15 +15,32 @@ const FilterSection = () => {
   return (
     <Grid
       container
-      gap={1}
-      sx={{ display: "flex", textAlign: "center", marginTop: "50px" }}
+      gap={2}
+      sx={{
+        display: "flex",
+        textAlign: "center",
+        marginTop: "50px",
+        justifyContent: "center",
+      }}
     >
       <Grid item xs={12} sm={8} md={4} lg={3.9}>
-        <Card sx={{ boxShadow: "1px 1px 8px #80808085", padding: "10px 30px" }}>
+        <Card
+          sx={{
+            boxShadow: "1px 1px 8px #80808085",
+            padding: "7px 20px 20px",
+            backgroundColor: "#71807a",
+            color: "white",
+          }}
+        >
           <p style={{ textAlign: "center", fontSize: "20px", margin: "0px" }}>
             ABC Filter
           </p>
           <Autocomplete
+            sx={{
+              backgroundColor: "white",
+              borderRadius: "5px",
+              marginTop: "5px",
+            }}
             fullWidth
             size="small"
             disablePortal
@@ -34,11 +51,23 @@ const FilterSection = () => {
         </Card>
       </Grid>
       <Grid item xs={12} sm={8} md={4} lg={3.9}>
-        <Card sx={{ boxShadow: "1px 1px 8px #80808085", padding: "10px 30px" }}>
+        <Card
+          sx={{
+            boxShadow: "1px 1px 8px #80808085",
+            padding: "7px 20px 20px",
+            backgroundColor: "#71807a",
+            color: "white",
+          }}
+        >
           <p style={{ textAlign: "center", fontSize: "20px", margin: "0px" }}>
             XYZ Filter
           </p>
           <Autocomplete
+            sx={{
+              backgroundColor: "white",
+              borderRadius: "5px",
+              marginTop: "5px",
+            }}
             fullWidth
             size="small"
             disablePortal
@@ -49,11 +78,23 @@ const FilterSection = () => {
         </Card>
       </Grid>
       <Grid item xs={12} sm={8} md={4} lg={3.9}>
-        <Card sx={{ boxShadow: "1px 1px 8px #80808085", padding: "10px 30px" }}>
+        <Card
+          sx={{
+            boxShadow: "1px 1px 8px #80808085",
+            padding: "7px 20px 20px",
+            backgroundColor: "#71807a",
+            color: "white",
+          }}
+        >
           <p style={{ textAlign: "center", fontSize: "20px", margin: "0px" }}>
             Measure
           </p>
           <Autocomplete
+            sx={{
+              backgroundColor: "white",
+              borderRadius: "5px",
+              marginTop: "5px",
+            }}
             fullWidth
             size="small"
             disablePortal
@@ -63,12 +104,24 @@ const FilterSection = () => {
           />
         </Card>
       </Grid>
-      <Grid item xs={12} sm={8} md={4} lg={3}>
-        <Card sx={{ boxShadow: "1px 1px 8px #80808085", padding: "10px 30px" }}>
+      <Grid item xs={12} sm={8} md={4} lg={3.9}>
+        <Card
+          sx={{
+            boxShadow: "1px 1px 8px #80808085",
+            padding: "7px 20px 20px",
+            backgroundColor: "#71807a",
+            color: "white",
+          }}
+        >
           <p style={{ textAlign: "center", fontSize: "20px", margin: "0px" }}>
             Brand
           </p>
           <Autocomplete
+            sx={{
+              backgroundColor: "white",
+              borderRadius: "5px",
+              marginTop: "5px",
+            }}
             fullWidth
             size="small"
             disablePortal
@@ -78,12 +131,24 @@ const FilterSection = () => {
           />
         </Card>
       </Grid>
-      <Grid item xs={12} sm={8} md={4} lg={3}>
-        <Card sx={{ boxShadow: "1px 1px 8px #80808085", padding: "10px 30px" }}>
+      <Grid item xs={12} sm={8} md={4} lg={3.9}>
+        <Card
+          sx={{
+            boxShadow: "1px 1px 8px #80808085",
+            padding: "7px 20px 20px",
+            backgroundColor: "#71807a",
+            color: "white",
+          }}
+        >
           <p style={{ textAlign: "center", fontSize: "20px", margin: "0px" }}>
             Grammage
           </p>
           <Autocomplete
+            sx={{
+              backgroundColor: "white",
+              borderRadius: "5px",
+              marginTop: "5px",
+            }}
             fullWidth
             size="small"
             disablePortal

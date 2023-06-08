@@ -27,7 +27,7 @@ export default function ClippedDrawer() {
       <CssBaseline />
       <AppBar
         position="fixed"
-        sx={{ zIndex: (theme) => theme.zIndex.drawer + 1, bgcolor: "#398585", display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', padding: '0px 10px' }}
+        sx={{ zIndex: (theme) => theme.zIndex.drawer + 1, bgcolor: "#398585", display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', padding: '0px 20px' }}
       >
         <Toolbar>
           <Typography variant="h6" noWrap component="div">

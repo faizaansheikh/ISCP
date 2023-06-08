@@ -3,8 +3,8 @@ import React from "react";
 
 const SummaryCard = () => {
   return (
-    <Card sx={{ boxShadow: "1px 1px 8px #80808085", padding: "10px 30px" }}>
-      <p style={{ textAlign: "center", fontSize: "25px", margin: "7px 0px" }}>
+    <Card sx={{ boxShadow: "1px 1px 8px #80808085", padding: "7px 0px 30px" }}>
+      <p style={{ textAlign: "center", fontSize: "25px", margin: "0px" }}>
         Summary
       </p>
       <div
