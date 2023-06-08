@@ -16,6 +16,7 @@ import {
   Typography,
 } from "@mui/material";
 import Table from "../Setups/Table";
+
 function Setup() {
   const top100Films = [
     { label: "The Shawshank Redemption", year: 1994 },
@@ -207,6 +208,8 @@ function Setup() {
 
         <Box><Button sx={{bgcolor:"#398585",color:'white',mt:'40px',ml:'8px'}}>Save</Button></Box>
       </FormControl>
+
+     
     </>
   );
 }
