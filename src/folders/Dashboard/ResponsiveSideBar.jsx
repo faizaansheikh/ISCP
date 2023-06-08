@@ -6,14 +6,14 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
+// import InboxIcon from '@mui/icons-material/MoveToInbox';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import MailIcon from '@mui/icons-material/Mail';
-import MenuIcon from '@mui/icons-material/Menu';
+// import MailIcon from '@mui/icons-material/Mail';
+// import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Setup from '../Setups/Setup';
@@ -110,7 +110,7 @@ function ResponsiveDrawer(props) {
           ml: { sm: `${drawerWidth}px` },
         }}
       >
-        <Toolbar sx={{bgcolor:'#398585'}}>
+        <Toolbar sx={{ bgcolor: '#398585' }}>
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -118,10 +118,10 @@ function ResponsiveDrawer(props) {
             onClick={handleDrawerToggle}
             sx={{ mr: 2, display: { sm: 'none' } }}
           >
-            <MenuIcon />
+            {/* <MenuIcon /> */}
           </IconButton>
           <Typography variant="h6" noWrap component="div">
-          ISCP Integrated Supply Chain Planning
+            ISCP Integrated Supply Chain Planning
           </Typography>
         </Toolbar>
       </AppBar>
@@ -141,7 +141,7 @@ function ResponsiveDrawer(props) {
           }}
           sx={{
             display: { xs: 'block', sm: 'none' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth,bgcolor:'#398585' },
+            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, bgcolor: '#398585' },
           }}
         >
           {drawer}
