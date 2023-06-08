@@ -18,18 +18,18 @@ const rows = [
   createData("C", "c text"),
 ];
 const useStyles = makeStyles({
-    table: {
+  table: {
     //   minWidth: 350,
-      "& .MuiTableCell-root": {
-        border: '1px solid black'
-      }
+    "& .MuiTableCell-root": {
+      border: '1px solid black'
     }
-  });
- 
+  }
+});
+
 export default function BasicTable() {
-    const classes = useStyles()
+  const classes = useStyles()
   return (
-    <TableContainer component={Paper} sx={{mt:'50px'}}>
+    <TableContainer component={Paper} sx={{ mt: '50px' }}>
       <Table className={classes.table} sx={{ minWidth: 350 }} aria-label="simple table">
         <TableHead>
           <TableRow>

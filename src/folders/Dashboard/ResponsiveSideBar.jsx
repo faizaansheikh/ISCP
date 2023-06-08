@@ -53,7 +53,7 @@ function ResponsiveDrawer(props) {
                   p: "10px",
                 }}
               >
-                <InboxIcon />
+                {/* <InboxIcon /> */}
                 <Button
                   sx={{ color: "white" }}
                   onClick={() => setMenuData("setup")}
@@ -69,7 +69,7 @@ function ResponsiveDrawer(props) {
                   p: "10px",
                 }}
               >
-                <InboxIcon />
+                {/* <InboxIcon /> */}
                 <Button
                   sx={{ color: "white" }}
                   onClick={() => setMenuData("result")}
