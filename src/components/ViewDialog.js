@@ -9,7 +9,7 @@ import DialogActions from "@mui/material/DialogActions";
 import IconButton from "@mui/material/IconButton";
 // import CloseIcon from "@mui/icons-material/Close";
 import Typography from "@mui/material/Typography";
-import "./ViewDialog.css";
+import style from "./ViewDialog.module.css";
 
 const ColorButton = styled(Button)(() => ({
   color: "white",
@@ -82,52 +82,49 @@ export default function ViewDialog({ setOpen, open }) {
             Product in CY Category
           </BootstrapDialogTitle>
         </div>
-        <div style={{ overflow: "auto", height: "210px" }}>
+        <div style={{ overflow: "auto", height: "250px" }}>
           <DialogContent dividers>
             <table>
               <thead>
                 <tr>
-                  <th>ABC XYZ</th>
-                  <th>Brand</th>
-                  <th>Grammage</th>
+                  <th className={style.heading}>ABC</th>
+                  <th className={style.heading}>XYZ</th>
+                  <th className={style.heading}>Brand</th>
+                  <th className={style.heading}>Grammage</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>124</td>
-                  <td>124</td>
-                  <td>124</td>
+                  <td className={style.theading}>124</td>
+                  <td className={style.theading}>124</td>
+                  <td className={style.theading}>124</td>
+                  <td className={style.theading}>124</td>
                 </tr>
                 <tr>
-                  <td>124</td>
-                  <td>124</td>
-                  <td>124</td>
+                  <td className={style.theading}>124</td>
+                  <td className={style.theading}>124</td>
+                  <td className={style.theading}>124</td>
+                  <td className={style.theading}>124</td>
                 </tr>
                 <tr>
-                  <td>124</td>
-                  <td>124</td>
-                  <td>124</td>
+                  <td className={style.theading}>124</td>
+                  <td className={style.theading}>124</td>
+                  <td className={style.theading}>124</td>
+                  <td className={style.theading}>124</td>
                 </tr>
                 <tr>
-                  <td>124</td>
-                  <td>124</td>
-                  <td>124</td>
-                </tr>
-                <tr>
-                  <td>124</td>
-                  <td>124</td>
-                  <td>124</td>
-                </tr>
-                <tr>
-                  <td>124</td>
-                  <td>124</td>
-                  <td>124</td>
+                  <td className={style.theading}>124</td>
+                  <td className={style.theading}>124</td>
+                  <td className={style.theading}>124</td>
+                  <td className={style.theading}>124</td>
                 </tr>
               </tbody>
             </table>
           </DialogContent>
         </div>
-        <DialogActions style={{ backgroundColor: "#71807a", padding: '15px 10px' }}>
+        <DialogActions
+          style={{ backgroundColor: "#71807a", padding: "15px 10px" }}
+        >
           <ColorButton
             autoFocus
             onClick={handleClose}
