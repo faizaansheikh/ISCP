@@ -14,9 +14,11 @@ import {
   Switch,
   TextField,
   Typography,
+  
 } from "@mui/material";
 import Table from "../Setups/Table";
 
+// import Main from '../Dashboard/Main'
 const ColorButton = styled(Button)(() => ({
   color: "white",
   backgroundColor: "#398585",
@@ -46,18 +48,13 @@ const CssTextField = styled(TextField)({
 });
 
 function Setup() {
+
   const top100Films = [
     { label: "The Shawshank Redemption", year: 1994 },
     { label: "The Godfather", year: 1972 },
     { label: "The Godfather: Part II", year: 1974 },
   ];
-  // const Item = styled(Paper)(({ theme }) => ({
-  //   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
-  //   ...theme.typography.body2,
-  //   padding: theme.spacing(1),
-  //   textAlign: "center",
-  //   color: theme.palette.text.secondary,
-  // }));
+ 
   return (
     <>
       <Box sx={{ width: "100%" }}>
