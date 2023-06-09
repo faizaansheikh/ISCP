@@ -23,13 +23,15 @@ const FilterSection = () => {
         justifyContent: "center",
       }}
     >
-      <Grid item xs={12} sm={8} md={4} lg={3.9}>
+      <Grid item xs={12} sm={8} md={4} lg={3.5}>
         <Card
           sx={{
             boxShadow: "1px 1px 8px #80808085",
             padding: "7px 20px 20px",
             backgroundColor: "#71807a",
             color: "white",
+            // width:'400px'
+
           }}
         >
           <p style={{ textAlign: "center", fontSize: "20px", margin: "0px" }}>
@@ -50,13 +52,14 @@ const FilterSection = () => {
           />
         </Card>
       </Grid>
-      <Grid item xs={12} sm={8} md={4} lg={3.9}>
+      <Grid item xs={12} sm={8} md={4} lg={3.5}>
         <Card
           sx={{
             boxShadow: "1px 1px 8px #80808085",
             padding: "7px 20px 20px",
             backgroundColor: "#71807a",
             color: "white",
+            // width:'400px'
           }}
         >
           <p style={{ textAlign: "center", fontSize: "20px", margin: "0px" }}>
@@ -77,13 +80,14 @@ const FilterSection = () => {
           />
         </Card>
       </Grid>
-      <Grid item xs={12} sm={8} md={4} lg={3.9}>
+      <Grid item xs={12} sm={8} md={4} lg={3.5}>
         <Card
           sx={{
             boxShadow: "1px 1px 8px #80808085",
             padding: "7px 20px 20px",
             backgroundColor: "#71807a",
             color: "white",
+            // width:'400px'
           }}
         >
           <p style={{ textAlign: "center", fontSize: "20px", margin: "0px" }}>
