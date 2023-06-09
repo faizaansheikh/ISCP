@@ -28,23 +28,23 @@ td {
 th {
   /* width: 50px!important; */
   padding: 5px 35px 5px 35px;
+  border-bottom: 2px solid #8080804d;
 }
 .tbdy {
   font-size: 12px;
   text-align: center;
-  /* width: 40px!important; */
-  /* border: 1px solid black; */
 }
 .thd {
   font-size: 13px;
   text-align: center;
-  /* border: 1px solid black; */
-  /* width: 30px!important; */
-  /* padding: 30px!important; */
   background-color: #398585;
   color: white;
   padding: 0px;
 }
 td {
   padding: 12px 0px 12px 0px;
+  border-top: 2px solid #8080804d;
+  border-bottom: 2px solid #8080804d;
+  border-right: 2px solid #8080804d;
+  border-left: 2px solid #8080804d;
 }

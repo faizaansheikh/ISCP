@@ -14,11 +14,9 @@ import {
   Switch,
   TextField,
   Typography,
-  
 } from "@mui/material";
 import Table from "../Setups/Table";
 
-// import Main from '../Dashboard/Main'
 const ColorButton = styled(Button)(() => ({
   color: "white",
   backgroundColor: "#398585",
@@ -48,13 +46,18 @@ const CssTextField = styled(TextField)({
 });
 
 function Setup() {
-
   const top100Films = [
     { label: "The Shawshank Redemption", year: 1994 },
     { label: "The Godfather", year: 1972 },
     { label: "The Godfather: Part II", year: 1974 },
   ];
- 
+  // const Item = styled(Paper)(({ theme }) => ({
+  //   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
+  //   ...theme.typography.body2,
+  //   padding: theme.spacing(1),
+  //   textAlign: "center",
+  //   color: theme.palette.text.secondary,
+  // }));
   return (
     <>
       <Box sx={{ width: "100%" }}>
@@ -72,7 +75,7 @@ function Setup() {
         </Grid>
       </Box>
 
-      <FormControl sx={{ m: 1, width: { xs: 350, md: 460 } }}>
+      <FormControl sx={{ m: 1, width: { xs: 350, md: 460, lg: 600 } }}>
         <Typography sx={{ mr: "20px", mt: "20px", mb: "20px" }}>
           Profile Name
         </Typography>
@@ -135,7 +138,7 @@ function Setup() {
           <Typography sx={{ mr: "20px", mt: "20px", mb: "20px" }}>
             Use Grouping
           </Typography>
-          <Switch defaultChecked/>
+          <Switch defaultChecked />
         </Box>
 
         <Typography sx={{ mr: "20px", mt: "20px", mb: "20px" }}>
@@ -163,78 +166,78 @@ function Setup() {
             <CssTextField {...params} label="pareto by percentage" />
           )}
         />
-        <Box sx={{ width: { xs: 350, md: 1000 } }}>
-          <Table />
-        </Box>
-
-        <Box
-          sx={{
-            mt: "30px",
-          }}
-        >
-          <Typography sx={{ mr: "20px", mt: "20px", mb: "20px" }}>
-            Run Only ABC Segmentation
-            <Switch defaultChecked />
-          </Typography>
-        </Box>
-
-        <Typography sx={{ mr: "20px", mt: "20px", mb: "20px" }}>
-          XYZ Segmentation Method
-        </Typography>
-        <CssTextField size="small" label="Select a measure for XYZ" select>
-          <MenuItem>n</MenuItem>
-          <MenuItem>n</MenuItem>
-          <MenuItem>n</MenuItem>
-        </CssTextField>
-
-        <Box
-          sx={{
-            mt: '40px',
-            width: { xs: 350, md: 1000 },
-            display: "flex",
-            justifyContent: "space-around",
-            flexWrap: 'wrap'
-          }}
-        >
-          <Box>
-            <Typography sx={{ mr: "20px", mt: "20px", mb: "20px" }}>
-              Cv Threshold
-            </Typography>
-            <CssTextField
-              sx={{ width: "320px" }}
-              size="small"
-              type="number"
-            // label=""
-            />
-          </Box>
-          <Box>
-            <Typography sx={{ mr: "20px", mt: "20px", mb: "20px" }}>
-              Gini Threshold
-            </Typography>
-            <CssTextField
-              sx={{ width: "320px" }}
-              size="small"
-              type="number"
-            // label=""
-            />
-          </Box>
-          <Box>
-            <Typography sx={{ mr: "20px", mt: "20px", mb: "20px" }}>
-              Slope Threshold
-            </Typography>
-            <CssTextField
-              sx={{ width: "320px" }}
-              size="small"
-              type="number"
-            // label=""
-            />
-          </Box>
-        </Box>
-
-        <Box><ColorButton sx={{ bgcolor: "#398585", color: 'white', mt: '40px', ml: '8px' }}>Save</ColorButton></Box>
       </FormControl>
+      <Box>
+        <Table />
+      </Box>
 
-     
+      <Box
+        sx={{
+          mt: "30px",
+        }}
+      >
+        <Typography sx={{ mr: "20px", mt: "20px", mb: "20px" }}>
+          Run Only ABC Segmentation
+          <Switch defaultChecked />
+        </Typography>
+      </Box>
+
+      <Typography sx={{ mr: "20px", mt: "20px", mb: "20px" }}>
+        XYZ Segmentation Method
+      </Typography>
+      <CssTextField size="small" label="Select a measure for XYZ" select>
+        <MenuItem>n</MenuItem>
+        <MenuItem>n</MenuItem>
+        <MenuItem>n</MenuItem>
+      </CssTextField>
+
+      <Box
+        sx={{
+          mt: '40px',
+          width: { xs: 350, md: 1000, lg: 1250 },
+          display: "flex",
+          justifyContent: "space-between",
+          flexWrap: 'wrap'
+        }}
+      >
+        <Box>
+          <Typography sx={{ mr: "20px", mt: "20px", mb: "20px" }}>
+            Cv Threshold
+          </Typography>
+          <CssTextField
+            // sx={{ width: "100%" }}
+            size="small"
+            type="number"
+          // label=""
+          />
+        </Box>
+        <Box>
+          <Typography sx={{ mr: "20px", mt: "20px", mb: "20px" }}>
+            Gini Threshold
+          </Typography>
+          <CssTextField
+            // sx={{ width: "100%" }}
+            size="small"
+            type="number"
+          // label=""
+          />
+        </Box>
+        <Box>
+          <Typography sx={{ mr: "20px", mt: "20px", mb: "20px" }}>
+            Slope Threshold
+          </Typography>
+          <CssTextField
+            // sx={{ width: "400px" }}
+            size="small"
+            type="number"
+          // label=""
+          />
+        </Box>
+      </Box>
+
+      <Box><ColorButton sx={{ bgcolor: "#398585", color: 'white', mt: '40px', ml: '8px' }}>Save</ColorButton></Box>
+
+
     </>
   );
 }
