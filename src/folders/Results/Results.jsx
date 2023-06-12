@@ -4,6 +4,8 @@ import SummaryCard from "../../components/SummaryCard";
 import ProfileSection from "../../components/ProfileSection";
 import FilterSection from "../../components/FilterSection";
 import ResultsTable from "../Results/ResultsTable";
+import Graph from "../Graph/Graph";
+
 function Results() {
   return (
     <>
@@ -16,11 +18,15 @@ function Results() {
           <SummaryCard />
         </Grid>
       </Grid>
+
       <FilterSection />
-      <Box sx={{ mt: "30px", boxShadow: "1px 1px 35px #80808085", p: { xs: "30px", md: "30px", lg: "0px", xl: '0px' } }}>
+
+      <Box sx={{ mt: "30px", boxShadow: "1px 1px 35px #80808085", p: { xs: "0px", md: "0px", lg: "0px", xl: '0px' } }}>
         <Typography sx={{ pt: '17px', pr: '17px', pb: '17px', pl: '20px', fontSize: '20px' }}>Results</Typography>
         <ResultsTable />
       </Box>
+
+      <Graph />
       {/* </Container> */}
     </>
   );

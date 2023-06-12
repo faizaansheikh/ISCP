@@ -6,7 +6,6 @@ import Grid from "@mui/material/Grid";
 import {
   Autocomplete,
   Button,
-  Container,
   FormControl,
   InputLabel,
   MenuItem,
@@ -27,35 +26,41 @@ const ColorButton = styled(Button)(() => ({
 }));
 
 const CssTextField = styled(TextField)({
-  "& label.Mui-focused": {
-    color: "#398585",
+  '& label.Mui-focused': {
+    color: '#398585',
   },
-  "& .MuiInput-underline:after": {
-    borderBottomColor: "#398585",
+  '& .MuiInput-underline:after': {
+    borderBottomColor: '#398585',
   },
-  "& .MuiOutlinedInput-root": {
-    "& fieldset": {
-      borderColor: "#398585",
+  '& .MuiOutlinedInput-root': {
+    '& fieldset': {
+      borderColor: '#398585',
     },
-    "&:hover fieldset": {
-      borderColor: "#398585",
+    '&:hover fieldset': {
+      borderColor: '#398585',
     },
-    "&.Mui-focused fieldset": {
-      borderColor: "#398585",
+    '&.Mui-focused fieldset': {
+      borderColor: '#398585',
     },
   },
 });
+
 function Setup() {
   const top100Films = [
     { label: "The Shawshank Redemption", year: 1994 },
     { label: "The Godfather", year: 1972 },
     { label: "The Godfather: Part II", year: 1974 },
   ];
- 
+  // const Item = styled(Paper)(({ theme }) => ({
+  //   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
+  //   ...theme.typography.body2,
+  //   padding: theme.spacing(1),
+  //   textAlign: "center",
+  //   color: theme.palette.text.secondary,
+  // }));
   return (
     <>
-     <Container>
-     <Box>
+      <Box sx={{ width: "100%" }}>
         <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 1, md: 3 }}>
           <Grid item xs={6}>
             <Box sx={{ bgcolor: "whitesmoke", textAlign: "center", p: "15px" }}>
@@ -70,7 +75,7 @@ function Setup() {
         </Grid>
       </Box>
 
-      <FormControl sx={{ m: 1, width: { xs: 350, md: 460 } }}>
+      <FormControl sx={{ m: 1, width: { xs: 350, md: 460, lg: 600 } }}>
         <Typography sx={{ mr: "20px", mt: "20px", mb: "20px" }}>
           Profile Name
         </Typography>
@@ -79,44 +84,40 @@ function Setup() {
           label="a name to identify your settings profile"
         ></CssTextField>
 
-          <Typography sx={{ mr: "20px", mt: "20px", mb: "20px" }}>
-            Segmentation Measure (ABC)
-          </Typography>
-          <CssTextField
-            size="small"
-            label="Select a segmentation measure"
-            select
-          >
-            <MenuItem>n</MenuItem>
-            <MenuItem>n</MenuItem>
-            <MenuItem>n</MenuItem>
-          </CssTextField>
+        <Typography sx={{ mr: "20px", mt: "20px", mb: "20px" }}>
+          Segmentation Measure (ABC)
+        </Typography>
+        <CssTextField size="small" label="Select a segmentation measure" select>
+          <MenuItem>n</MenuItem>
+          <MenuItem>n</MenuItem>
+          <MenuItem>n</MenuItem>
+        </CssTextField>
 
-          <Typography sx={{ mr: "20px", mt: "20px", mb: "20px" }}>
-            Primary Calculation Level
-          </Typography>
-          <CssTextField
-            size="small"
-            label="Select your base level for calculations"
-            select
-          >
-            <MenuItem>n</MenuItem>
-            <MenuItem>n</MenuItem>
-            <MenuItem>n</MenuItem>
-          </CssTextField>
+        <Typography sx={{ mr: "20px", mt: "20px", mb: "20px" }}>
+          Primary Calculation Level
+        </Typography>
+        <CssTextField
+          size="small"
+          label="Select your base level for calculations"
+          select
+        >
+          <MenuItem>n</MenuItem>
+          <MenuItem>n</MenuItem>
+          <MenuItem>n</MenuItem>
+        </CssTextField>
 
-          <Typography sx={{ mr: "20px", mt: "20px", mb: "20px" }}>
-            Periodcity
-          </Typography>
-          <CssTextField
-            size="small"
-            label="Period to base your calculations on"
-            select
-          >
-            <MenuItem>n</MenuItem>
-            <MenuItem>n</MenuItem>
-            <MenuItem>n</MenuItem>
-          </CssTextField>
+        <Typography sx={{ mr: "20px", mt: "20px", mb: "20px" }}>
+          Periodcity
+        </Typography>
+        <CssTextField
+          size="small"
+          label="Period to base your calculations on"
+          select
+        >
+          <MenuItem>n</MenuItem>
+          <MenuItem>n</MenuItem>
+          <MenuItem>n</MenuItem>
+        </CssTextField>
 
         <Typography sx={{ mr: "20px", mt: "20px", mb: "20px" }}>
           Calculation Horizon
@@ -137,21 +138,21 @@ function Setup() {
           <Typography sx={{ mr: "20px", mt: "20px", mb: "20px" }}>
             Use Grouping
           </Typography>
-          <Switch defaultChecked/>
+          <Switch defaultChecked />
         </Box>
 
-          <Typography sx={{ mr: "20px", mt: "20px", mb: "20px" }}>
-            Secondary Calculation Levels
-          </Typography>
-          <CssTextField
-            size="small"
-            label="Select Further levels for grouping"
-            select
-          >
-            <MenuItem>n</MenuItem>
-            <MenuItem>n</MenuItem>
-            <MenuItem>n</MenuItem>
-          </CssTextField>
+        <Typography sx={{ mr: "20px", mt: "20px", mb: "20px" }}>
+          Secondary Calculation Levels
+        </Typography>
+        <CssTextField
+          size="small"
+          label="Select Further levels for grouping"
+          select
+        >
+          <MenuItem>n</MenuItem>
+          <MenuItem>n</MenuItem>
+          <MenuItem>n</MenuItem>
+        </CssTextField>
 
         <Typography sx={{ mr: "20px", mt: "20px", mb: "20px" }}>
           Segmentation Method
@@ -165,7 +166,7 @@ function Setup() {
             <CssTextField {...params} label="pareto by percentage" />
           )}
         />
-        <Box sx={{ width: { xs: 350, md: 1000 } }}>
+        <Box sx={{ width: { xs: 350, md: 1050, lg: 1250 } }}>
           <Table />
         </Box>
 
@@ -192,9 +193,9 @@ function Setup() {
         <Box
           sx={{
             mt: '40px',
-            width: { xs: 350, md: 1000 },
+            width: { xs: 350, md: 1000, lg: 120 },
             display: "flex",
-            justifyContent: "space-around",
+            justifyContent: "space-between",
             flexWrap: 'wrap'
           }}
         >
@@ -236,7 +237,7 @@ function Setup() {
         <Box><ColorButton sx={{ bgcolor: "#398585", color: 'white', mt: '40px', ml: '8px' }}>Save</ColorButton></Box>
       </FormControl>
 
-     
+
     </>
   );
 }
