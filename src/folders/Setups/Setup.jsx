@@ -62,203 +62,270 @@ function Setup() {
 
   return (
     <>
-     <Container>
-     <Box>
-        <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 1, md: 3 }}>
-          <Grid item xs={6}>
-            <Box sx={{ bgcolor: "whitesmoke", textAlign: "center", p: "15px" }}>
-              ABC Setup
-            </Box>
-          </Grid>
-          <Grid item xs={6}>
-            <Box sx={{ bgcolor: "whitesmoke", textAlign: "center", p: "15px" }}>
-              XYZ Setup
-            </Box>
-          </Grid>
-        </Grid>
-      </Box>
-
-      <Box sx={{ width: { xs: 370, lg: 460, xl: 600 } }}>
-        <FormControl fullWidth sx={{ m: 1 }}>
-          <Typography sx={{ mr: "20px", mt: "20px", mb: "20px" }}>
-            Profile Name
-          </Typography>
-          <CssTextField
-            size="small"
-            label="a name to identify your settings profile"
-          ></CssTextField>
-
-          <Typography sx={{ mr: "20px", mt: "20px", mb: "20px" }}>
-            Segmentation Measure (ABC)
-          </Typography>
-          <CssTextField
-            size="small"
-            label="Select a segmentation measure"
-            select
-          >
-            <MenuItem>n</MenuItem>
-            <MenuItem>n</MenuItem>
-            <MenuItem>n</MenuItem>
-          </CssTextField>
-
-          <Typography sx={{ mr: "20px", mt: "20px", mb: "20px" }}>
-            Primary Calculation Level
-          </Typography>
-          <CssTextField
-            size="small"
-            label="Select your base level for calculations"
-            select
-          >
-            <MenuItem>n</MenuItem>
-            <MenuItem>n</MenuItem>
-            <MenuItem>n</MenuItem>
-          </CssTextField>
-
-          <Typography sx={{ mr: "20px", mt: "20px", mb: "20px" }}>
-            Periodcity
-          </Typography>
-          <CssTextField
-            size="small"
-            label="Period to base your calculations on"
-            select
-          >
-            <MenuItem>n</MenuItem>
-            <MenuItem>n</MenuItem>
-            <MenuItem>n</MenuItem>
-          </CssTextField>
-
-          <Typography sx={{ mr: "20px", mt: "20px", mb: "20px" }}>
-            Calculation Horizon
-          </Typography>
-          <CssTextField
-            size="small"
-            label="Input your previous Weeks/Months/Year as a number"
-          ></CssTextField>
-          <Box
-            sx={{
-              mt: "30px",
-              display: "flex",
-              justifyContent: "center",
-              flexDirection: "column",
-              alignItems: "center",
-            }}
-          >
-            <Typography sx={{ mr: "20px", mt: "20px", mb: "20px" }}>
-              Use Grouping
-            </Typography>
-            <Switch defaultChecked />
-          </Box>
-
-          <Typography sx={{ mr: "20px", mt: "20px", mb: "20px" }}>
-            Secondary Calculation Levels
-          </Typography>
-          <CssTextField
-            size="small"
-            label="Select Further levels for grouping"
-            select
-          >
-            <MenuItem>n</MenuItem>
-            <MenuItem>n</MenuItem>
-            <MenuItem>n</MenuItem>
-          </CssTextField>
-
-          <Typography sx={{ mr: "20px", mt: "20px", mb: "20px" }}>
-            Segmentation Method
-          </Typography>
-          <Autocomplete
-            size="small"
-            id="combo-box-demo"
-            options={top100Films}
-            // sx={{ width: 300 }}
-            renderInput={(params) => (
-              <CssTextField {...params} label="pareto by percentage" />
-            )}
-          />
-        </FormControl>
-      </Box>
-
-      <Box>
-        <Table />
-      </Box>
-
       <Box
         sx={{
-          mt: "30px",
+          pl: { xs: "0px", md: "20px", lg: "20px" },
+          pr: { xs: "0px", md: "20px", lg: "20px" },
         }}
       >
-        <Typography sx={{ mr: "20px", mt: "20px", mb: "20px" }}>
-          Run Only ABC Segmentation
-          <Switch defaultChecked />
-        </Typography>
-      </Box>
-      <Box sx={{ width: { xs: 370, lg: 460, xl: 600 } }}>
-      <Typography sx={{ mr: "20px", mt: "20px", mb: "20px" }}>
-        XYZ Segmentation Method
-      </Typography>
-      <CssTextField fullWidth size="small" label="Select a measure for XYZ" select>
-        <MenuItem>n</MenuItem>
-        <MenuItem>n</MenuItem>
-        <MenuItem>n</MenuItem>
-      </CssTextField>
-      </Box>
-      <Box sx={{mt:'25px'}}>
-        <Grid
-          container
-          rowSpacing={1}
-          columnSpacing={{ xs: 1, sm: 1, md: 3 }}
-          sx={{ display: "flex", justifyContent: "center" }}
-        >
-          <Grid item sm={12} md={4}>
-            <Item sx={{ border: "none" }}>
-              <Typography sx={{ mt: "20px", mb: "20px" }}>
-                Cv Threshold
-              </Typography>
-              <CssTextField
-                sx={{ width: { xs: 330, sm: 330, lg: "fullWidth" } }}
-                size="small"
-                type="number"
-                // label=""
-              />
-            </Item>
+        <Box>
+          <Grid
+            container
+            rowSpacing={1}
+            columnSpacing={{ xs: 1, sm: 1, md: 3 }}
+            sx={{ mr: { xs: "0px", md: "none", lg: "none" } }}
+            align="center"
+            width="auto"
+          >
+            <Grid item xs={12} md={6}>
+              <Box
+                sx={{
+                  bgcolor: "whitesmoke",
+                  textAlign: "center",
+                  p: "15px",
+                  width: { xs: 320, lg: "auto" },
+                }}
+              >
+                ABC Setup
+              </Box>
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <Box
+                sx={{
+                  bgcolor: "whitesmoke",
+                  textAlign: "center",
+                  p: "15px",
+                  width: { xs: 320, lg: "auto" },
+                }}
+              >
+                XYZ Setup
+              </Box>
+            </Grid>
           </Grid>
-          <Grid item sm={12} md={4}>
-            <Item>
-              <Typography sx={{ mt: "20px", mb: "20px" }}>
-                Gini Threshold
-              </Typography>
-              <CssTextField
-                sx={{ width: { xs: 330, sm: 330, lg: "fullWidth" } }}
-                size="small"
-                type="number"
-                // label=""
-              />
-            </Item>
-          </Grid>
-          <Grid item sm={12} md={4}>
-            <Item>
-              <Typography sx={{ mt: "20px", mb: "20px" }}>
-                Slope Threshold
-              </Typography>
-              <CssTextField
-                sx={{ width: { xs: 330, sm: 330, lg: "fullWidth" } }}
-                size="small"
-                type="number"
-                // label=""
-              />
-            </Item>
-          </Grid>
-        </Grid>
-      </Box>
+        </Box>
 
-          
-      <Box sx={{ display: "flex", justifyContent: {xs:"center",sm:"center",md:'start',lg:'start'} }} >
-        <ColorButton
-          sx={{ bgcolor: "#398585", color: "white", mt: "40px", ml: "8px" }}
+        <Box
+          sx={{
+            width: { xs: "none", lg: 460, xl: 600 },
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            mr: { xs: "0px", md: "none", lg: "none" },
+          }}
         >
-          Save
-        </ColorButton>
+          <FormControl fullWidth sx={{ m: 1 }}>
+            <Typography sx={{ mt: "20px", mb: "20px" }}>
+              Profile Name
+            </Typography>
+            <CssTextField
+              size="small"
+              label="a name to identify your settings profile"
+            ></CssTextField>
+
+            <Typography sx={{ mr: "20px", mt: "20px", mb: "20px" }}>
+              Segmentation Measure (ABC)
+            </Typography>
+            <CssTextField
+              size="small"
+              label="Select a segmentation measure"
+              select
+            >
+              <MenuItem>n</MenuItem>
+              <MenuItem>n</MenuItem>
+              <MenuItem>n</MenuItem>
+            </CssTextField>
+
+            <Typography sx={{ mr: "20px", mt: "20px", mb: "20px" }}>
+              Primary Calculation Level
+            </Typography>
+            <CssTextField
+              size="small"
+              label="Select your base level for calculations"
+              select
+            >
+              <MenuItem>n</MenuItem>
+              <MenuItem>n</MenuItem>
+              <MenuItem>n</MenuItem>
+            </CssTextField>
+
+            <Typography sx={{ mr: "20px", mt: "20px", mb: "20px" }}>
+              Periodcity
+            </Typography>
+            <CssTextField
+              size="small"
+              label="Period to base your calculations on"
+              select
+            >
+              <MenuItem>n</MenuItem>
+              <MenuItem>n</MenuItem>
+              <MenuItem>n</MenuItem>
+            </CssTextField>
+
+            <Typography sx={{ mr: "20px", mt: "20px", mb: "20px" }}>
+              Calculation Horizon
+            </Typography>
+            <CssTextField
+              size="small"
+              label="Input your previous Weeks/Months/Year as a number"
+            ></CssTextField>
+            <Box
+              sx={{
+                mt: "30px",
+                display: "flex",
+                justifyContent: "center",
+                flexDirection: "column",
+                alignItems: "center",
+              }}
+            >
+              <Typography sx={{ mr: "20px", mt: "20px", mb: "20px" }}>
+                Use Grouping
+              </Typography>
+              <Switch defaultChecked />
+            </Box>
+
+            <Typography sx={{ mr: "20px", mt: "20px", mb: "20px" }}>
+              Secondary Calculation Levels
+            </Typography>
+            <CssTextField
+              size="small"
+              label="Select Further levels for grouping"
+              select
+            >
+              <MenuItem>n</MenuItem>
+              <MenuItem>n</MenuItem>
+              <MenuItem>n</MenuItem>
+            </CssTextField>
+
+            <Typography sx={{ mr: "20px", mt: "20px", mb: "20px" }}>
+              Segmentation Method
+            </Typography>
+            <Autocomplete
+              size="small"
+              id="combo-box-demo"
+              options={top100Films}
+              // sx={{ width: 300 }}
+              renderInput={(params) => (
+                <CssTextField {...params} label="pareto by percentage" />
+              )}
+            />
+          </FormControl>
+        </Box>
+
+        <Box>
+          <Table />
+        </Box>
+
+        <Box
+          sx={{
+            mt: "30px",
+          }}
+        >
+          <Typography sx={{ mr: "20px", mt: "20px", mb: "20px" }}>
+            Run Only ABC Segmentation
+            <Switch defaultChecked />
+          </Typography>
+        </Box>
+        <Box
+          sx={{
+            width: { xs: "none", lg: 460, xl: 600 },
+            display: "flex",
+            justifyContent: "center",
+            flexDirection: "column",
+            alignItems: "center",
+            mr: { xs: "3px", md: "none", lg: "none" },
+          }}
+        >
+          <Typography sx={{ mr: "20px", mt: "20px", mb: "20px" }}>
+            XYZ Segmentation Method
+          </Typography>
+          <CssTextField
+          fullWidth
+            // sx={{width:{xs:'280px',md:'fullwidth'}}}
+            size="small"
+            label="Select a measure for XYZ"
+            select
+          >
+            <MenuItem>n</MenuItem>
+            <MenuItem>n</MenuItem>
+            <MenuItem>n</MenuItem>
+          </CssTextField>
+        </Box>
+        <Box sx={{ mt: "25px" }}>
+          <Grid
+            container
+            rowSpacing={1}
+            columnSpacing={{ xs: 1, sm: 1, md: 3 }}
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+            width="auto"
+            justify="center"
+          >
+            <Grid item sm={12} md={4}>
+              <Item sx={{ border: "none", width: { xs: 320, lg: "auto" } }}>
+                <Typography sx={{ mt: "20px", mb: "20px" }}>
+                  Cv Threshold
+                </Typography>
+                <CssTextField
+                  fullWidth
+                  // sx={{ width: { xs: 300, sm: 330, lg: "fullWidth" } }}
+                  size="small"
+                  type="number"
+                  // label=""
+                />
+              </Item>
+            </Grid>
+            <Grid item sm={12} md={4}>
+              <Item sx={{ border: "none", width: { xs: 320, lg: "auto" } }}>
+                <Typography sx={{ mt: "20px", mb: "20px" }}>
+                  Gini Threshold
+                </Typography>
+                <CssTextField
+                  fullWidth
+                  // sx={{ width: { xs: 300, sm: 330, lg: "fullWidth" } }}
+                  size="small"
+                  type="number"
+                  // label=""
+                />
+              </Item>
+            </Grid>
+            <Grid item sm={12} md={4}>
+              <Item sx={{ border: "none", width: { xs: 320, lg: "auto" } }}>
+                <Typography sx={{ mt: "20px", mb: "20px" }}>
+                  Slope Threshold
+                </Typography>
+                <CssTextField
+                  fullWidth
+                  // sx={{ width: { xs: 300, sm: 330, lg: "fullWidth" } }}
+                  size="small"
+                  type="number"
+                  // label=""
+                />
+              </Item>
+            </Grid>
+          </Grid>
+        </Box>
+
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: {
+              xs: "center",
+              sm: "center",
+              md: "start",
+              lg: "start",
+            },
+          }}
+        >
+          <ColorButton
+            sx={{ bgcolor: "#398585", color: "white", mt: "40px", ml: "8px" }}
+          >
+            Save
+          </ColorButton>
+        </Box>
       </Box>
-     </Container>
     </>
   );
 }

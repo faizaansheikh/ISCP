@@ -30,7 +30,7 @@ export default function BasicTable() {
   const classes = useStyles()
   return (
     <TableContainer component={Paper} sx={{ mt: '50px',width:'auto' }}>
-      <Table className={classes.table} sx={{ minWidth: 350 }} aria-label="simple table">
+      <Table className={classes.table}  aria-label="simple table">
         <TableHead>
           <TableRow>
             <TableCell align="center">Group</TableCell>
