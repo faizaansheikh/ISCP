@@ -19,7 +19,7 @@ import Results from "../Results/Results";
 const drawerWidth = 255;
 
 export default function ClippedDrawer() {
-  const [menuData, setMenuData] = React.useState("result");
+  const [menuData, setMenuData] = React.useState("setup");
 
   return (
     <Box sx={{ display: "flex", bgcolor: "#398585 !imporant" }}>
@@ -35,7 +35,7 @@ export default function ClippedDrawer() {
         </Toolbar>
 
         {
-          menuData === 'result' ? <p style={{ fontSize: '18px' }}>ABC/XYZ Analysis</p> : <p style={{ fontSize: '18px' }}>Segmentation Setup</p>
+          menuData === 'result' ? <p style={{ fontSize: '18px', margin: '0px' }}>ABC/XYZ Analysis</p> : <p style={{ fontSize: '18px', margin: '0px' }}>Segmentation Setup</p>
         }
       </AppBar>
       <Drawer

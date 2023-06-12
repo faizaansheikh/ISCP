@@ -26,34 +26,10 @@ function Results() {
         </Grid>
       </Grid>
       <FilterSection />
-      {isMobile ? (
-        <Box
-          sx={{ mt: "30px", boxShadow: "1px 1px 35px #80808085", p: "15px" }}
-        >
-          <Typography
-            sx={{ pt: "5px", pb: "17px", pl: "28px", fontSize: "20px" }}
-          >
-            Results
-          </Typography>
-          <ResultsTable />
-        </Box>
-      ) : (
-        <>
-          <Typography
-            sx={{
-              pt: "17px",
-              pr: "17px",
-              pb: "17px",
-              pl: "20px",
-              fontSize: "20px",
-            }}
-          >
-            Results
-          </Typography>
-          <ResultsTable />
-        </>
-      )}
-
+      <Box sx={{ mt: '30px' ,boxShadow:"1px 1px 35px #80808085",p:'20px'}}>
+        <Typography sx={{pt:'17px',pr:'17px',pb:'17px',pl:'20px',fontSize:'20px'}}>Results</Typography>
+        <ResultsTable />
+      </Box>
       {/* </Container> */}
     </>
   );
