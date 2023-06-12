@@ -1,95 +1,50 @@
-.tbl-container{
+.tbl-container {
   max-width: fit-content;
   max-height: fit-content;
-  /* background-color: aqua; */
 }
-.tbl-fixed{
+.tbl-fixed {
   overflow-x: scroll;
   overflow-y: scroll;
   height: fit-content;
   max-height: 100vh;
   width: fit-content;
-  /* max-width: 1000px; */
-  
+  max-width: 1000px;
 }
 @media screen and (max-width: 480px) {
-  .tbl-fixed{
-      width: fit-content;
-      max-width: 350px;
-
+  .tbl-fixed {
+    width: fit-content;
+    max-width: 350px;
   }
 }
-@media screen and (min-width: 768px) {
-  /* //For Laptops */
-  .tbl-fixed{
-      width: fit-content;
-      max-width: 700px;
-  }
-  } 
-  
-  @media screen and (min-width: 920px) {
-  /* //For Large Laptops */
-  .tbl-fixed{
-      width: fit-content;
-      max-width: 900px;
-
-  }
-  }
-  
-  @media screen and (min-width: 1300px) {
-  /* //For Big TV's (HD Screens)  */
-  .tbl-fixed{
-      width: fit-content;
-      max-width: 1000px;
-
-  }
-  }
-  
-  
-  @media screen and (min-width: 1920px) {
-  /* //For Projectors or Higher Resolution Screens (Full HD) */
-  .tbl-fixed{
-      width: fit-content;
-      max-width: 1880px;
-
-  }
-  }
-  @media screen and (min-width: 3840px) {
-  /* //For 4K Displays (Ultra HD) */
-  .tbl-fixed{
-      width: fit-content;
-      max-width: 3810px;
-
-  }
-  }
 /* .brand1{
   padding: 50px;
 } */
-table, th, td {
+table,
+th,
+td {
   border: 1px solid;
   /* width: 40px; */
 }
-th{
+th {
   /* width: 50px!important; */
   padding: 5px 35px 5px 35px;
+  border-bottom: 2px solid #8080804d;
 }
-.tbdy{
+.tbdy {
   font-size: 12px;
   text-align: center;
-  /* width: 40px!important; */
-  /* border: 1px solid black; */
 }
-.thd{
+.thd {
   font-size: 13px;
   text-align: center;
-  /* border: 1px solid black; */
-  /* width: 30px!important; */
-  /* padding: 30px!important; */
   background-color: #398585;
   color: white;
   padding: 0px;
 }
-td{
+td {
   padding: 12px 0px 12px 0px;
-
+  border-top: 2px solid #8080804d;
+  border-bottom: 2px solid #8080804d;
+  border-right: 2px solid #8080804d;
+  border-left: 2px solid #8080804d;
 }
