@@ -17,7 +17,7 @@ import {
   Typography,
 } from "@mui/material";
 import Table from "../Setups/Table";
-// import Main from '../Dashboard/Main'
+
 const ColorButton = styled(Button)(() => ({
   color: "white",
   backgroundColor: "#398585",
@@ -45,13 +45,6 @@ const CssTextField = styled(TextField)({
     },
   },
 });
-const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === "none",
-  // ...theme.typography.body2,
-  // padding: theme.spacing(1),
-  // textAlign: 'center',
-  // color: theme.palette.text.secondary,
-}));
 
 function Setup() {
   const top100Films = [
@@ -59,7 +52,6 @@ function Setup() {
     { label: "The Godfather", year: 1972 },
     { label: "The Godfather: Part II", year: 1974 },
   ];
-
   return (
     <>
      <Container>
@@ -78,28 +70,23 @@ function Setup() {
         </Grid>
       </Box>
 
-      <Box sx={{ width: { xs: 370, lg: 460, xl: 600 } }}>
-        <FormControl fullWidth sx={{ m: 1 }}>
-          <Typography sx={{ mr: "20px", mt: "20px", mb: "20px" }}>
-            Profile Name
-          </Typography>
-          <CssTextField
-            size="small"
-            label="a name to identify your settings profile"
-          ></CssTextField>
+      <FormControl sx={{ m: 1, width: { xs: 350, md: 460, lg: 600 } }}>
+        <Typography sx={{ mr: "20px", mt: "20px", mb: "20px" }}>
+          Profile Name
+        </Typography>
+        <CssTextField
+          size="small"
+          label="a name to identify your settings profile"
+        ></CssTextField>
 
-          <Typography sx={{ mr: "20px", mt: "20px", mb: "20px" }}>
-            Segmentation Measure (ABC)
-          </Typography>
-          <CssTextField
-            size="small"
-            label="Select a segmentation measure"
-            select
-          >
-            <MenuItem>n</MenuItem>
-            <MenuItem>n</MenuItem>
-            <MenuItem>n</MenuItem>
-          </CssTextField>
+        <Typography sx={{ mr: "20px", mt: "20px", mb: "20px" }}>
+          Segmentation Measure (ABC)
+        </Typography>
+        <CssTextField size="small" label="Select a segmentation measure" select>
+          <MenuItem>n</MenuItem>
+          <MenuItem>n</MenuItem>
+          <MenuItem>n</MenuItem>
+        </CssTextField>
 
           <Typography sx={{ mr: "20px", mt: "20px", mb: "20px" }}>
             Primary Calculation Level
@@ -117,6 +104,7 @@ function Setup() {
           <Typography sx={{ mr: "20px", mt: "20px", mb: "20px" }}>
             Periodcity
           </Typography>
+        </Box>
           <CssTextField
             size="small"
             label="Period to base your calculations on"
@@ -149,6 +137,8 @@ function Setup() {
             <Switch defaultChecked />
           </Box>
 
+       
+      </FormControl>
           <Typography sx={{ mr: "20px", mt: "20px", mb: "20px" }}>
             Secondary Calculation Levels
           </Typography>
@@ -191,6 +181,7 @@ function Setup() {
           <Switch defaultChecked />
         </Typography>
       </Box>
+
       <Box sx={{ width: { xs: 370, lg: 460, xl: 600 } }}>
       <Typography sx={{ mr: "20px", mt: "20px", mb: "20px" }}>
         XYZ Segmentation Method

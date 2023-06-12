@@ -29,7 +29,7 @@ const useStyles = makeStyles({
 export default function BasicTable() {
   const classes = useStyles()
   return (
-    <TableContainer component={Paper} sx={{ mt: '50px',width:'auto' }}>
+    <TableContainer component={Paper} sx={{ mt: '50px', width: 'auto' }}>
       <Table className={classes.table} sx={{ minWidth: 350 }} aria-label="simple table">
         <TableHead>
           <TableRow>
