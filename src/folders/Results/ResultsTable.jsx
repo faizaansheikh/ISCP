@@ -1,205 +1,201 @@
-
-// import React from "react";
-// import "../Results/table.css";
-// function ResultsTable() {
-//   return (
-//     <>
-//       <div className="container tbl-container">
-//         <div className="row tbl-fixed">
-//           <table className="table-striped table-condensed">
-//             <thead className="thd">
-//               <tr>
-//                 <th>ABC</th>
-//                 <th>XYZ</th>
-//                 <th className="brand1">Brand</th>
-//                 <th>Grammage</th>
-//                 <th>2019 m11</th>
-//                 <th>2019 m12</th>
-//                 <th>2020 M01</th>
-//                 <th>2020 M02</th>
-//                 <th>2020 M03</th>
-//                 <th>2020 M01</th>
-//                 <th>2020 M02</th>
-//                 <th>2020 M03</th>
-//                 <th>2020 M01</th>
-//                 <th>2020 M02</th>
-//                 <th>2020 M03</th>
-//                 <th>2020 M03</th>
-//                 <th>2020 M01</th>
-//                 <th>2020 M02</th>
-//                 <th>2020 M03</th>
-//               </tr>
-//             </thead>
-//             <tbody className="tbdy">
-//               <tr>
-//                 <td>A</td>
-//                 <td>X</td>
-//                 <td>Max bar regular</td>
-//                 <td>190-285 GM</td>
-//                 <td>COGS</td>
-//                 <td>37244</td>
-//                 <td>36883</td>
-//                 <td>39222</td>
-//                 <td>37740</td>
-//                 <td>36883</td>
-//                 <td>39222</td>
-//                 <td>37740</td>
-//                 <td>36883</td>
-//                 <td>39222</td>
-//                 <td>37740</td>
-//                 <td>37740</td>
-//                 <td>36883</td>
-//                 <td>39222</td>
-//                 <td>37740</td>
-//               </tr>
-//               <tr>
-//                 <td>A</td>
-//                 <td>X</td>
-//                 <td>Max bar regular</td>
-//                 <td>190-285 GM</td>
-//                 <td>COGS</td>
-//                 <td>37244</td>
-//                 <td>36883</td>
-//                 <td>39222</td>
-//                 <td>37740</td>
-//               </tr>
-//               <tr>
-//                 <td>A</td>
-//                 <td>X</td>
-//                 <td>Max bar regular</td>
-//                 <td>190-285 GM</td>
-//                 <td>COGS</td>
-//                 <td>37244</td>
-//                 <td>36883</td>
-//                 <td>39222</td>
-//                 <td>37740</td>
-//               </tr>
-//               <tr>
-//                 <td>A</td>
-//                 <td>X</td>
-//                 <td>Max bar regular</td>
-//                 <td>190-285 GM</td>
-//                 <td>COGS</td>
-//                 <td>37244</td>
-//                 <td>36883</td>
-//                 <td>39222</td>
-//                 <td>37740</td>
-//               </tr>
-//               <tr>
-//                 <td>A</td>
-//                 <td>X</td>
-//                 <td>Max bar regular</td>
-//                 <td>190-285 GM</td>
-//                 <td>COGS</td>
-//                 <td>37244</td>
-//                 <td>36883</td>
-//                 <td>39222</td>
-//                 <td>37740</td>
-//               </tr>
-//               <tr>
-//                 <td>A</td>
-//                 <td>X</td>
-//                 <td>Max bar regular</td>
-//                 <td>190-285 GM</td>
-//                 <td>COGS</td>
-//                 <td>37244</td>
-//                 <td>36883</td>
-//                 <td>39222</td>
-//                 <td>37740</td>
-//               </tr>
-//               <tr>
-//                 <td>A</td>
-//                 <td>X</td>
-//                 <td>Max bar regular</td>
-//                 <td>190-285 GM</td>
-//                 <td>COGS</td>
-//                 <td>37244</td>
-//                 <td>36883</td>
-//                 <td>39222</td>
-//                 <td>37740</td>
-//               </tr>
-//             </tbody>
-//           </table>
-//         </div>
-//       </div>
-//     </>
-//   );
-// }
-
-// export default ResultsTable;
-
-// import "./App.css";
-import '../Results/newtable.css'
-import fakeData from "./MOCK_DATA.json";
 import * as React from "react";
-import { useTable } from "react-table";
+import Table from "@mui/material/Table";
+import TableBody from "@mui/material/TableBody";
+import TableCell from "@mui/material/TableCell";
+import TableContainer from "@mui/material/TableContainer";
+import TableHead from "@mui/material/TableHead";
+import TableRow from "@mui/material/TableRow";
+import Paper from "@mui/material/Paper";
+import { Box } from "@mui/material";
 
-function ResultsTable() {
-  const data = React.useMemo(() => fakeData, []);
-  const columns = React.useMemo(
-    () => [
-      {
-        Header: "ID",
-        accessor: "id",
-      },
-      {
-        Header: "First Name",
-        accessor: "first_name",
-      },
-      {
-        Header: "Last Name",
-        accessor: "last_name",
-      },
-      {
-        Header: "Email",
-        accessor: "email",
-      },
-      {
-        Header: "Gender",
-        accessor: "gender",
-      },
-      {
-        Header: "Last Name",
-        accessor: "university",
-      },
-    ],
-    []
-  );
+// function createData(name, calories, fat, carbs, protein) {
+//   return { name, calories, fat, carbs, protein };
+// }
+const headerData = [
+  "ABC",
+  "XYZ",
+  "Brand",
+  "Grammage",
+  "Measure",
+  "2019 M11",
+  "2019 M12",
+  "2020 M01",
+  "2020 M02",
+  "ABC",
+  "XYZ",
+  "Brand",
+  "Grammage",
+  "Measure",
+  "2019 M11",
+  "2019 M12",
+  "2020 M01",
+  "2020 M02",
+  "ABC",
+  "XYZ",
+  "Brand",
+  "Grammage",
+  "Measure",
+  "2019 M11",
+  "2019 M12",
+  "2020 M01",
+  "2020 M02",
+];
+const rows = [
+  "A",
+  "X",
+  "Max bar regular",
+  "190-285 gm",
+  "COGS",
+  "37244",
+  "36883",
+  "39222",
+  "38153",
+  "A",
+  "X",
+  "Max bar regular",
+  "190-285 gm",
+  "COGS",
+  "37244",
+  "36883",
+  "39222",
+  "38153",
+  "A",
+  "X",
+  "Max bar regular",
+  "190-285 gm",
+  "COGS",
+  "37244",
+  "36883",
+  "39222",
+  "38153",
+];
 
-  const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
-    useTable({ columns, data });
-
+export default function BasicTable() {
   return (
     <div className="App">
-      <div className="container">
-        <table className='react_table' {...getTableProps()}>
-          <thead className='new_thead'>
-            {headerGroups.map((headerGroup) => (
-              <tr {...headerGroup.getHeaderGroupProps()}>
-                {headerGroup.headers.map((column) => (
-                  <th className='new_th' {...column.getHeaderProps()}>
-                    {column.render("Header")}
-                  </th>
-                ))}
-              </tr>
-            ))}
-          </thead>
-          <tbody className='new_tbody' {...getTableBodyProps()}>
-            {rows.map((row) => {
-              prepareRow(row);
-              return (
-                <tr className='new_tr' {...row.getRowProps()}>
-                  {row.cells.map((cell) => (
-                    <td className='new_td' {...cell.getCellProps()}> {cell.render("Cell")} </td>
+      <Box sx={{ overflow: "auto" }}>
+        <Box sx={{ width: "100%",display: "table", tableLayout: "fixed" }}>
+          <TableContainer sx={{ height:'500px'}} component={Paper}>
+            <Table sx={{ minWidth: 650 }} aria-label="simple table">
+              <TableHead
+                sx={{
+                  bgcolor: "#398585",
+                  color: "white",
+                  border: "1px solid ",
+                }}
+              >
+                <TableRow sx={{ border: "1px solid white", color: "white" }}>
+                  {headerData.map((elem) => (
+                    <TableCell
+                      align="center"
+                      style={{
+                        backgroundColor: "#398585",
+                        color: "white",
+                        border: "1px solid white",
+                      }}
+                    >
+                      {elem}
+                    </TableCell>
                   ))}
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
-      </div>
+                </TableRow>
+              </TableHead>
+              <TableBody>
+                {/* {rows.map((row) => (
+                  
+                ))} */}
+
+                <TableRow
+                  // key={row.name}
+                  sx={{ "&:last-child td, &:last-child th": { border:'1px solid' } }}
+                >
+                  {rows.map((elem) => (
+                    <TableCell sx={{border:'1px solid grey',textAlign:'center'}} >
+                      {elem}
+                    </TableCell>
+                  ))}
+                </TableRow>
+
+                <TableRow
+                  // key={row.name}
+                  sx={{ "&:last-child td, &:last-child th": { border:'1px solid' } }}
+                >
+                  {rows.map((elem) => (
+                    <TableCell sx={{border:'1px solid grey',textAlign:'center'}} >
+                      {elem}
+                    </TableCell>
+                  ))}
+                </TableRow>
+
+                <TableRow
+                  // key={row.name}
+                  sx={{ "&:last-child td, &:last-child th": { border:'1px solid' } }}
+                >
+                  {rows.map((elem) => (
+                    <TableCell sx={{border:'1px solid grey',textAlign:'center'}} >
+                      {elem}
+                    </TableCell>
+                  ))}
+                </TableRow>
+
+                <TableRow
+                  // key={row.name}
+                  sx={{ "&:last-child td, &:last-child th": { border:'1px solid' } }}
+                >
+                  {rows.map((elem) => (
+                    <TableCell sx={{border:'1px solid grey',textAlign:'center'}} >
+                      {elem}
+                    </TableCell>
+                  ))}
+                </TableRow>
+
+                <TableRow
+                  // key={row.name}
+                  sx={{ "&:last-child td, &:last-child th": { border:'1px solid' } }}
+                >
+                  {rows.map((elem) => (
+                    <TableCell sx={{border:'1px solid grey',textAlign:'center'}} >
+                      {elem}
+                    </TableCell>
+                  ))}
+                </TableRow>
+
+                <TableRow
+                  // key={row.name}
+                  sx={{ "&:last-child td, &:last-child th": { border:'1px solid' } }}
+                >
+                  {rows.map((elem) => (
+                    <TableCell sx={{border:'1px solid grey',textAlign:'center'}} >
+                      {elem}
+                    </TableCell>
+                  ))}
+                </TableRow>
+
+                <TableRow
+                  // key={row.name}
+                  sx={{ "&:last-child td, &:last-child th": { border:'1px solid' } }}
+                >
+                  {rows.map((elem) => (
+                    <TableCell sx={{border:'1px solid grey',textAlign:'center'}} >
+                      {elem}
+                    </TableCell>
+                  ))}
+                </TableRow>
+
+                <TableRow
+                  // key={row.name}
+                  sx={{ "&:last-child td, &:last-child th": { border:'1px solid' } }}
+                >
+                  {rows.map((elem) => (
+                    <TableCell sx={{border:'1px solid grey',textAlign:'center'}} >
+                      {elem}
+                    </TableCell>
+                  ))}
+                </TableRow>
+              </TableBody>
+            </Table>
+          </TableContainer>
+        </Box>
+      </Box>
     </div>
   );
 }
-
-export default ResultsTable;

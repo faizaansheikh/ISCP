@@ -5,7 +5,7 @@ import Plot from "react-plotly.js";
 const IndexGraph = () => {
   return (
     <Card sx={{ boxShadow: "1px 1px 8px #80808085", marginTop: "30px" }}>
-      <Typography sx={{ padding: 2 }}>Gini Index Graph</Typography>
+      <Typography sx={{ padding: 2,fontSize:'20px' }}>Gini Index Graph</Typography>
       <Divider />
 
       <Plot
@@ -25,27 +25,7 @@ const IndexGraph = () => {
             name: "Bonus Tristar",
             type: "scatter",
           },
-          {
-            x: [0, 1, 2, 3, 4, 5, 6, 7, 8],
-            y: [1, 2, 36, 45, 5, 64, 7, 45],
-            marker: { color: "blue" },
-            name: "Brite Maximum power",
-            type: "scatter",
-          },
-          {
-            x: [0, 1, 2, 3, 4, 5, 6, 7, 8],
-            y: [1, 29, 36, 43, 5, 46, 67, 18],
-            marker: { color: "Purple" },
-            name: "Great Regular Flovour",
-            type: "scatter",
-          },
-          {
-            x: [0, 1, 2, 3, 4, 5, 6, 7, 8],
-            y: [1, 25, 37, 44, 65, 46, 37, 81],
-            marker: { color: "green" },
-            name: "Max Bar Regular",
-            type: "scatter",
-          },
+          
         ]}
         layout={
           {

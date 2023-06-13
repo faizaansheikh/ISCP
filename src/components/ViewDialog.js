@@ -7,7 +7,7 @@ import DialogTitle from "@mui/material/DialogTitle";
 import DialogContent from "@mui/material/DialogContent";
 import DialogActions from "@mui/material/DialogActions";
 import IconButton from "@mui/material/IconButton";
-// import CloseIcon from "@mui/icons-material/Close";
+import CloseIcon from "@mui/icons-material/Close";
 import Typography from "@mui/material/Typography";
 import style from "./ViewDialog.module.css";
 
@@ -45,7 +45,8 @@ function BootstrapDialogTitle(props) {
             color: (theme) => theme.palette.grey[500],
           }}
         >
-          {/* <CloseIcon /> */}
+        
+          <CloseIcon />
         </IconButton>
       ) : null}
     </DialogTitle>
@@ -91,6 +92,7 @@ export default function ViewDialog({ setOpen, open }) {
                   <th className={style.heading}>XYZ</th>
                   <th className={style.heading}>Brand</th>
                   <th className={style.heading}>Grammage</th>
+                  
                 </tr>
               </thead>
               <tbody>
@@ -100,6 +102,44 @@ export default function ViewDialog({ setOpen, open }) {
                   <td className={style.theading}>124</td>
                   <td className={style.theading}>124</td>
                 </tr>
+                <tr>
+                  <td className={style.theading}>124</td>
+                  <td className={style.theading}>124</td>
+                  <td className={style.theading}>124</td>
+                  <td className={style.theading}>124</td>
+                </tr>
+                <tr>
+                  <td className={style.theading}>124</td>
+                  <td className={style.theading}>124</td>
+                  <td className={style.theading}>124</td>
+                  <td className={style.theading}>124</td>
+                </tr>
+                <tr>
+                  <td className={style.theading}>124</td>
+                  <td className={style.theading}>124</td>
+                  <td className={style.theading}>124</td>
+                  <td className={style.theading}>124</td>
+                </tr>
+
+                <tr>
+                  <td className={style.theading}>124</td>
+                  <td className={style.theading}>124</td>
+                  <td className={style.theading}>124</td>
+                  <td className={style.theading}>124</td>
+                </tr>
+                <tr>
+                  <td className={style.theading}>124</td>
+                  <td className={style.theading}>124</td>
+                  <td className={style.theading}>124</td>
+                  <td className={style.theading}>124</td>
+                </tr>
+                <tr>
+                  <td className={style.theading}>124</td>
+                  <td className={style.theading}>124</td>
+                  <td className={style.theading}>124</td>
+                  <td className={style.theading}>124</td>
+                </tr>
+
                 <tr>
                   <td className={style.theading}>124</td>
                   <td className={style.theading}>124</td>
