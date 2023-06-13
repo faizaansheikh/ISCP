@@ -2,10 +2,10 @@ import { Card, Divider, Typography, Box } from "@mui/material";
 import React from "react";
 import Plot from "react-plotly.js";
 
-const TimeSeriesGraph = () => {
+const AttributeGraph = () => {
   return (
-    <Card sx={{ boxShadow: "1px 1px 8px #80808085", marginTop: "50px" }}>
-      <Typography sx={{ padding: 2 }}>TimeSeries of Selected data</Typography>
+    <Card sx={{ boxShadow: "1px 1px 8px #80808085",marginTop: "30px" }}>
+      <Typography sx={{ padding: 2 }}>Attribute Graphs</Typography>
       <Divider />
 
       <Plot
@@ -59,4 +59,4 @@ const TimeSeriesGraph = () => {
   );
 };
 
-export default TimeSeriesGraph;
+export default AttributeGraph;

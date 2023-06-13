@@ -1,8 +1,6 @@
 import React from "react";
 import {
   Box,
-  Container,
-  GlobalStyles,
   Grid,
   Typography,
   useMediaQuery,
@@ -29,10 +27,10 @@ function Results() {
       </Grid>
 
       <FilterSection />
-      <Box sx={{ mt: '30px' ,boxShadow:"1px 1px 35px #80808085",p:'20px'}}>
-        <Typography sx={{pt:'17px',pr:'17px',pb:'17px',pl:'20px',fontSize:'20px'}}>Results</Typography>
+      <Box sx={{ mt: '30px', boxShadow: "1px 1px 8px #80808085", p: '20px' }}>
+        <Typography sx={{ pt: '17px', pr: '17px', pb: '17px', pl: '20px', fontSize: '20px' }}>Results</Typography>
         <ResultsTable />
-      </Box>
+      </Box >
 
       <Graph />
       {/* </Container> */}
