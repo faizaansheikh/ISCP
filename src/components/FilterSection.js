@@ -1,3 +1,4 @@
+import styled from "@emotion/styled";
 import { Autocomplete, Card, Grid, TextField } from "@mui/material";
 import React from "react";
 
@@ -10,6 +11,26 @@ const top100Films = [
   { label: "Schindler's List", year: 1993 },
   { label: "Pulp Fiction", year: 1994 },
 ];
+
+const CssTextField = styled(TextField)({
+  "& label.Mui-focused": {
+    color: "#A0AAB4",
+  },
+  "& .MuiInput-underline:after": {
+    borderBottomColor: "#398585",
+  },
+  "& .MuiOutlinedInput-root": {
+    "& fieldset": {
+      borderColor: "#398585",
+    },
+    "&:hover fieldset": {
+      borderColor: "#398585",
+    },
+    "&.Mui-focused fieldset": {
+      borderColor: "#398585",
+    },
+  },
+});
 
 const FilterSection = () => {
   return (
@@ -31,7 +52,6 @@ const FilterSection = () => {
             backgroundColor: "#71807a",
             color: "white",
             // width:'400px'
-
           }}
         >
           <p style={{ textAlign: "center", fontSize: "20px", margin: "0px" }}>
@@ -48,7 +68,7 @@ const FilterSection = () => {
             disablePortal
             id="combo-box-demo"
             options={top100Films}
-            renderInput={(params) => <TextField {...params} />}
+            renderInput={(params) => <CssTextField {...params} />}
           />
         </Card>
       </Grid>
@@ -76,7 +96,7 @@ const FilterSection = () => {
             disablePortal
             id="combo-box-demo"
             options={top100Films}
-            renderInput={(params) => <TextField {...params} />}
+            renderInput={(params) => <CssTextField {...params} />}
           />
         </Card>
       </Grid>
@@ -104,7 +124,7 @@ const FilterSection = () => {
             disablePortal
             id="combo-box-demo"
             options={top100Films}
-            renderInput={(params) => <TextField {...params} />}
+            renderInput={(params) => <CssTextField {...params} />}
           />
         </Card>
       </Grid>
@@ -131,7 +151,7 @@ const FilterSection = () => {
             disablePortal
             id="combo-box-demo"
             options={top100Films}
-            renderInput={(params) => <TextField {...params} />}
+            renderInput={(params) => <CssTextField {...params} />}
           />
         </Card>
       </Grid>
@@ -158,7 +178,7 @@ const FilterSection = () => {
             disablePortal
             id="combo-box-demo"
             options={top100Films}
-            renderInput={(params) => <TextField {...params} />}
+            renderInput={(params) => <CssTextField {...params} />}
           />
         </Card>
       </Grid>

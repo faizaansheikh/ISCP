@@ -20,7 +20,7 @@ import Graph from "../Graph/Graph";
 const drawerWidth = 255;
 
 export default function ClippedDrawer() {
-  const [menuData, setMenuData] = React.useState("result");
+  const [menuData, setMenuData] = React.useState("setup");
 
   return (
     <Box sx={{ display: "flex", bgcolor: "#398585 !imporant" }}>

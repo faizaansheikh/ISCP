@@ -1,8 +1,6 @@
 import React from "react";
 import {
   Box,
-  Container,
-  GlobalStyles,
   Grid,
   Typography,
   useMediaQuery,
@@ -11,6 +9,8 @@ import SummaryCard from "../../components/SummaryCard";
 import ProfileSection from "../../components/ProfileSection";
 import FilterSection from "../../components/FilterSection";
 import ResultsTable from "../Results/ResultsTable";
+import Graph from "../Graph/Graph";
+
 function Results() {
   const isMobile = useMediaQuery("(min-width:600px)");
 
@@ -25,17 +25,12 @@ function Results() {
           <SummaryCard />
         </Grid>
       </Grid>
+
       <FilterSection />
-      {isMobile ? (
-        <Box sx={{ mt: '30px' ,boxShadow:"1px 1px 35px #80808085",p:'20px'}}>
-        <Typography sx={{pt:'5px',pr:'17px',pb:'17px',pl:'20px',fontSize:'20px'}}>Results</Typography>
+      <Box sx={{ mt: '30px' ,boxShadow:"1px 1px 35px #80808085",p:'20px'}}>
+        <Typography sx={{pt:'17px',pr:'17px',pb:'17px',pl:'20px',fontSize:'20px'}}>Results</Typography>
         <ResultsTable />
       </Box>
-      ):(<>
-       <Typography sx={{pt:'17px',pr:'17px',pb:'17px',pl:'20px',fontSize:'20px'}}>Results</Typography>
-        <ResultsTable />
-      </>)}
-     
       {/* </Container> */}
     </>
   );
