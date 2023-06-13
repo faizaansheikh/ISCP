@@ -16,10 +16,11 @@ import Divider from "@mui/material/Divider";
 import Setup from "../Setups/Setup";
 import { Button } from "@mui/material";
 import Results from "../Results/Results";
+import Graph from "../Graph/Graph";
 const drawerWidth = 255;
 
 export default function ClippedDrawer() {
-  const [menuData, setMenuData] = React.useState("setup");
+  const [menuData, setMenuData] = React.useState("result");
 
   return (
     <Box sx={{ display: "flex", bgcolor: "#398585 !imporant" }}>
@@ -104,6 +105,8 @@ export default function ClippedDrawer() {
         <Toolbar />
         {menuData === "setup" && <Setup />}
         {menuData === "result" && <Results />}
+        {menuData === "graph" && <Graph />}
+
       </Box>
     </Box>
   );
