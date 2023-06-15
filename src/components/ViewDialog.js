@@ -8,7 +8,6 @@ import DialogContent from "@mui/material/DialogContent";
 import DialogActions from "@mui/material/DialogActions";
 import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
-import Typography from "@mui/material/Typography";
 import style from "./ViewDialog.module.css";
 
 const ColorButton = styled(Button)(() => ({
@@ -42,10 +41,9 @@ function BootstrapDialogTitle(props) {
             position: "absolute",
             right: 8,
             top: 8,
-            color: (theme) => theme.palette.grey[500],
+            color: "white",
           }}
         >
-        
           <CloseIcon />
         </IconButton>
       ) : null}
@@ -64,7 +62,7 @@ export default function ViewDialog({ setOpen, open }) {
   };
 
   return (
-    <div>
+    <>
       <BootstrapDialog
         onClose={handleClose}
         aria-labelledby="customized-dialog-title"
@@ -92,7 +90,6 @@ export default function ViewDialog({ setOpen, open }) {
                   <th className={style.heading}>XYZ</th>
                   <th className={style.heading}>Brand</th>
                   <th className={style.heading}>Grammage</th>
-                  
                 </tr>
               </thead>
               <tbody>
@@ -174,6 +171,6 @@ export default function ViewDialog({ setOpen, open }) {
           </ColorButton>
         </DialogActions>
       </BootstrapDialog>
-    </div>
+    </>
   );
 }

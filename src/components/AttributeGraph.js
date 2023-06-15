@@ -3,19 +3,23 @@ import Plot from "react-plotly.js";
 import {
   Typography,
   FormControl,
-  FormLabel,
   RadioGroup,
   FormControlLabel,
   Radio,
   Card,
   Divider,
-  Box,
   Autocomplete,
   TextField,
 } from "@mui/material";
 const AttributeGraph = () => {
   return (
-    <Card sx={{ boxShadow: "1px 1px 8px #80808085", marginTop: "30px" }}>
+    <Card
+      sx={{
+        boxShadow: "1px 1px 8px #80808085",
+        marginTop: "30px",
+        height: "495px",
+      }}
+    >
       <Typography sx={{ padding: 2 }}>Attribute Graphs</Typography>
       <Divider />
       <FormControl sx={{ ml: "20px" }}>
@@ -55,54 +59,45 @@ const AttributeGraph = () => {
             label="0"
           />
         </RadioGroup>
-        
       </FormControl>
       <Autocomplete
-      
-          // fullWidth
-          size="small"
-          disablePortal
-          id="combo-box-demo"
-          options={[1, 2, 3, 4, 5, 6]}
-          sx={{ width: '100%',pl:'20px',pr:'20px' }}
-          renderInput={(params) => <TextField {...params} label="110-70 GM" />}
-        />
+        // fullWidth
+        size="small"
+        disablePortal
+        id="combo-box-demo"
+        options={[1, 2, 3, 4, 5, 6]}
+        sx={{ width: "100%", pl: "20px", pr: "20px" }}
+        renderInput={(params) => <TextField {...params} label="110-70 GM" />}
+      />
       <Plot
         style={{ Width: "100%" }}
         data={[
           {
-            x: [0, 1, 2, 3, 4, 5, 6, 7, 8],
+            x: [1, 2, 3, 4, 5, 6, 7, 8],
             y: [1, 5, 6, 54, 12, 14, 45, 90],
             marker: { color: "red" },
-            name: "Bonus Regular",
+            name: "Seasonality",
             type: "scatter",
           },
           {
-            x: [0, 1, 2, 3, 4, 5, 6, 7, 8],
-            y: [14, 22, 35, 47, 53, 61, 72, 85],
-            marker: { color: "orange" },
-            name: "Bonus Tristar",
-            type: "scatter",
-          },
-          {
-            x: [0, 1, 2, 3, 4, 5, 6, 7, 8],
+            x: [1, 2, 3, 4, 5, 6, 7, 8],
             y: [1, 2, 36, 45, 5, 64, 7, 45],
             marker: { color: "blue" },
-            name: "Brite Maximum power",
+            name: "Demand",
             type: "scatter",
           },
           {
-            x: [0, 1, 2, 3, 4, 5, 6, 7, 8],
+            x: [1, 2, 3, 4, 5, 6, 7, 8],
             y: [1, 29, 36, 43, 5, 46, 67, 18],
             marker: { color: "Purple" },
-            name: "Great Regular Flovour",
+            name: "Residual",
             type: "scatter",
           },
           {
-            x: [0, 1, 2, 3, 4, 5, 6, 7, 8],
+            x: [1, 2, 3, 4, 5, 6, 7, 8],
             y: [1, 25, 37, 44, 65, 46, 37, 81],
             marker: { color: "green" },
-            name: "Max Bar Regular",
+            name: "Trend",
             type: "scatter",
           },
         ]}
@@ -113,6 +108,7 @@ const AttributeGraph = () => {
             // title: "hello",
           }
         }
+        config={{ responsive: true }}
       />
     </Card>
   );

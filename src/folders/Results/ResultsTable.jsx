@@ -74,8 +74,8 @@ export default function BasicTable() {
   return (
     <div className="App">
       <Box sx={{ overflow: "auto" }}>
-        <Box sx={{ width: "100%",display: "table", tableLayout: "fixed" }}>
-          <TableContainer sx={{ height:'500px'}} component={Paper}>
+        <Box sx={{ width: "100%", display: "table", tableLayout: "fixed" }}>
+          <TableContainer sx={{ height: '500px' }} component={Paper}>
             <Table sx={{ minWidth: 650 }} aria-label="simple table">
               <TableHead
                 sx={{
@@ -92,6 +92,8 @@ export default function BasicTable() {
                         backgroundColor: "#398585",
                         color: "white",
                         border: "1px solid white",
+                        whiteSpace: 'nowrap',
+                        padding: '10px'
                       }}
                     >
                       {elem}
@@ -106,10 +108,20 @@ export default function BasicTable() {
 
                 <TableRow
                   // key={row.name}
-                  sx={{ "&:last-child td, &:last-child th": { border:'1px solid' } }}
+                  sx={{ "&:last-child td, &:last-child th": { border: '1px solid' } }}
                 >
                   {rows.map((elem) => (
-                    <TableCell sx={{border:'1px solid grey',textAlign:'center'}} >
+                    <TableCell sx={{ border: '1px solid grey', textAlign: 'center', whiteSpace: 'nowrap', p: '10px' }} >
+                      {elem}
+                    </TableCell>
+                  ))}
+                </TableRow>
+                <TableRow
+                  // key={row.name}
+                  sx={{ "&:last-child td, &:last-child th": { border: '1px solid' } }}
+                >
+                  {rows.map((elem) => (
+                    <TableCell sx={{ border: '1px solid grey', textAlign: 'center', whiteSpace: 'nowrap', p: '10px' }} >
                       {elem}
                     </TableCell>
                   ))}
@@ -117,10 +129,10 @@ export default function BasicTable() {
 
                 <TableRow
                   // key={row.name}
-                  sx={{ "&:last-child td, &:last-child th": { border:'1px solid' } }}
+                  sx={{ "&:last-child td, &:last-child th": { border: '1px solid' } }}
                 >
                   {rows.map((elem) => (
-                    <TableCell sx={{border:'1px solid grey',textAlign:'center'}} >
+                    <TableCell sx={{ border: '1px solid grey', textAlign: 'center', whiteSpace: 'nowrap', p: '10px' }} >
                       {elem}
                     </TableCell>
                   ))}
@@ -128,10 +140,10 @@ export default function BasicTable() {
 
                 <TableRow
                   // key={row.name}
-                  sx={{ "&:last-child td, &:last-child th": { border:'1px solid' } }}
+                  sx={{ "&:last-child td, &:last-child th": { border: '1px solid' } }}
                 >
                   {rows.map((elem) => (
-                    <TableCell sx={{border:'1px solid grey',textAlign:'center'}} >
+                    <TableCell sx={{ border: '1px solid grey', textAlign: 'center', whiteSpace: 'nowrap', p: '10px' }} >
                       {elem}
                     </TableCell>
                   ))}
@@ -139,10 +151,10 @@ export default function BasicTable() {
 
                 <TableRow
                   // key={row.name}
-                  sx={{ "&:last-child td, &:last-child th": { border:'1px solid' } }}
+                  sx={{ "&:last-child td, &:last-child th": { border: '1px solid' } }}
                 >
                   {rows.map((elem) => (
-                    <TableCell sx={{border:'1px solid grey',textAlign:'center'}} >
+                    <TableCell sx={{ border: '1px solid grey', textAlign: 'center', whiteSpace: 'nowrap', p: '10px' }} >
                       {elem}
                     </TableCell>
                   ))}
@@ -150,10 +162,10 @@ export default function BasicTable() {
 
                 <TableRow
                   // key={row.name}
-                  sx={{ "&:last-child td, &:last-child th": { border:'1px solid' } }}
+                  sx={{ "&:last-child td, &:last-child th": { border: '1px solid' } }}
                 >
                   {rows.map((elem) => (
-                    <TableCell sx={{border:'1px solid grey',textAlign:'center'}} >
+                    <TableCell sx={{ border: '1px solid grey', textAlign: 'center', whiteSpace: 'nowrap', p: '10px' }} >
                       {elem}
                     </TableCell>
                   ))}
@@ -161,10 +173,30 @@ export default function BasicTable() {
 
                 <TableRow
                   // key={row.name}
-                  sx={{ "&:last-child td, &:last-child th": { border:'1px solid' } }}
+                  sx={{ "&:last-child td, &:last-child th": { border: '1px solid' } }}
                 >
                   {rows.map((elem) => (
-                    <TableCell sx={{border:'1px solid grey',textAlign:'center'}} >
+                    <TableCell sx={{ border: '1px solid grey', textAlign: 'center', whiteSpace: 'nowrap', p: '10px' }} >
+                      {elem}
+                    </TableCell>
+                  ))}
+                </TableRow>
+                <TableRow
+                  // key={row.name}
+                  sx={{ "&:last-child td, &:last-child th": { border: '1px solid' } }}
+                >
+                  {rows.map((elem) => (
+                    <TableCell sx={{ border: '1px solid grey', textAlign: 'center', whiteSpace: 'nowrap', p: '10px' }} >
+                      {elem}
+                    </TableCell>
+                  ))}
+                </TableRow>
+                <TableRow
+                  // key={row.name}
+                  sx={{ "&:last-child td, &:last-child th": { border: '1px solid' } }}
+                >
+                  {rows.map((elem) => (
+                    <TableCell sx={{ border: '1px solid grey', textAlign: 'center', whiteSpace: 'nowrap', p: '10px' }} >
                       {elem}
                     </TableCell>
                   ))}
@@ -172,10 +204,10 @@ export default function BasicTable() {
 
                 <TableRow
                   // key={row.name}
-                  sx={{ "&:last-child td, &:last-child th": { border:'1px solid' } }}
+                  sx={{ "&:last-child td, &:last-child th": { border: '1px solid' } }}
                 >
                   {rows.map((elem) => (
-                    <TableCell sx={{border:'1px solid grey',textAlign:'center'}} >
+                    <TableCell sx={{ border: '1px solid grey', textAlign: 'center', whiteSpace: 'nowrap', p: '10px' }} >
                       {elem}
                     </TableCell>
                   ))}
@@ -183,10 +215,10 @@ export default function BasicTable() {
 
                 <TableRow
                   // key={row.name}
-                  sx={{ "&:last-child td, &:last-child th": { border:'1px solid' } }}
+                  sx={{ "&:last-child td, &:last-child th": { border: '1px solid gray' } }}
                 >
                   {rows.map((elem) => (
-                    <TableCell sx={{border:'1px solid grey',textAlign:'center'}} >
+                    <TableCell sx={{ border: '1px solid grey', textAlign: 'center', whiteSpace: 'nowrap', p: '10px' }} >
                       {elem}
                     </TableCell>
                   ))}
