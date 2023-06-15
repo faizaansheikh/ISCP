@@ -334,7 +334,7 @@ function Setup() {
           }}
         >
           <ColorButton
-            sx={{ bgcolor: "#398585", color: "white", mt: "40px", ml: "8px" }}
+            sx={{ bgcolor: "#398585", color: "white", mt: "30px" }}
           >
             Save
           </ColorButton>

@@ -1,24 +1,44 @@
-import React from "react";
+import React, { useState } from "react";
 import Plot from "react-plotly.js";
 import {
   Typography,
   FormControl,
-  FormLabel,
-  RadioGroup,
-  FormControlLabel,
-  Radio,
   Card,
   Divider,
   Box,
   Autocomplete,
   TextField,
+  Select,
+  MenuItem,
 } from "@mui/material";
 const AttributeGraph = () => {
+  const[drop,setDrop] = useState('')
   return (
     <Card sx={{ boxShadow: "1px 1px 8px #80808085", marginTop: "30px" }}>
       <Typography sx={{ padding: 2 }}>Attribute Graphs</Typography>
       <Divider />
-      <FormControl sx={{ ml: "20px" }}>
+      <Box sx={{ minWidth: 120,pl:'20px',pr:'20px' }}>
+      <FormControl sx={{pb:'15px',pt:'15px'}} fullWidth>
+        {/* <InputLabel id="demo-simple-select-label">{drop}</InputLabel> */}
+        <Select
+          // sx={{ width: '100%',pl:'20px',pr:'20px' }}
+          size="small"
+          // labelId="demo-simple-select-label"
+          id="demo-simple-select"
+          value={drop}
+          // label="Age"
+          onChange={(e)=>setDrop(e.target.value)}
+        >
+         <MenuItem value='Bonus Regular'> Bonus Regular</MenuItem>
+         <MenuItem value='Bonus Trister'> Bonus Trister</MenuItem>
+         <MenuItem value='Brite Maximum Power'> Brite Maximum Power</MenuItem>
+         <MenuItem value='Great Regular Flavour'>Great Regular Flavour</MenuItem>
+         <MenuItem value='Max Bar Regular'> Max Bar Regular</MenuItem>
+         <MenuItem value='0'> 0</MenuItem>
+        </Select>
+      </FormControl>
+    </Box>
+      {/* <FormControl sx={{ ml: "20px" }}>
         <RadioGroup
           row
           aria-labelledby="demo-row-radio-buttons-group-label"
@@ -56,7 +76,7 @@ const AttributeGraph = () => {
           />
         </RadioGroup>
         
-      </FormControl>
+      </FormControl> */}
       <Autocomplete
       
           // fullWidth

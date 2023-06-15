@@ -7,6 +7,7 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import { makeStyles } from "@mui/styles";
+import { Box } from "@mui/material";
 
 function createData(name, text) {
   return { name, text };
@@ -21,27 +22,35 @@ const useStyles = makeStyles({
   table: {
     //   minWidth: 350,
     "& .MuiTableCell-root": {
-      border: '1px solid black'
-    }
-  }
+      border: "1px solid black",
+    },
+  },
 });
 
 export default function BasicTable() {
-  const classes = useStyles()
+  const classes = useStyles();
   return (
-    <TableContainer component={Paper} sx={{ mt: '50px',width:'100%' }}>
-      <Table className={classes.table} sx={{width:'100%' }} aria-label="simple table">
-        <TableHead>
+    <TableContainer component={Paper} sx={{ mt: "50px", width: "100%" }}>
+      <Table
+        className={classes.table}
+        sx={{ width: "100%" }}
+        aria-label="simple table"
+      >
+        <TableHead sx={{ bgcolor: "#398585" }}>
           <TableRow>
-            <TableCell align="center">Group</TableCell>
-            <TableCell align="center">Threshold</TableCell>
+            <TableCell sx={{ color: "white", fontSize: "16px" }} align="center">
+              Group
+            </TableCell>
+            <TableCell sx={{ color: "white", fontSize: "16px" }} align="center">
+              Threshold
+            </TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {rows.map((row) => (
             <TableRow
               key={row.name}
-            //   sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+              //   sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
             >
               <TableCell align="center" component="th" scope="row">
                 {row.name}
