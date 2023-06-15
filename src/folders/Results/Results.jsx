@@ -11,12 +11,11 @@ function Results() {
 
   return (
     <>
-      {/* <Container sx={{bgcolor:'lightgrey'}}> */}
       <Grid container spacing={3}>
         <Grid item sx={6} sm={12} md={12} lg={5.5}>
           <ProfileSection />
         </Grid>
-        <Grid item xs={12} sm={8} md={12} lg={6.5}>
+        <Grid item xs={12} sm={12} md={12} lg={6.5}>
           <SummaryCard />
         </Grid>
       </Grid>
@@ -24,12 +23,10 @@ function Results() {
       <FilterSection />
       {isMobile ? (
         <Box
-          sx={{ mt: "30px", boxShadow: "1px 1px 35px #80808085", p: "20px" }}
+          sx={{ mt: "30px", boxShadow: "1px 1px 8px #80808085", p: "20px" }}
         >
-          
           <Typography
             sx={{
-              // pt: "17px",
               pr: "17px",
               pb: "17px",
               pl: "20px",
@@ -39,7 +36,7 @@ function Results() {
             Results
           </Typography>
           <ResultsTable />
-        
+
         </Box>
       ) : (
         <>
@@ -58,7 +55,7 @@ function Results() {
         </>
       )}
 
-      <Graph/>
+      <Graph />
     </>
   );
 }

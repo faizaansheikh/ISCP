@@ -1,33 +1,26 @@
 import React from "react";
-import { Card, Divider, Typography } from "@mui/material";
+import { Card } from "@mui/material";
 import Plot from "react-plotly.js";
 import "./summary.css";
 
 const SummaryCard = () => {
-  var xValues = ["A", "B", "C", "D", "E"];
-
-  var yValues = ["W", "X", "Y", "Z"];
-
-  var zValues = [
-    [0.0, 0.0, 0.75],
-    [0.0, 0.0, 0.75],
-    [0.75, 0.75, 0.75],
-  ];
-
   var colorscaleValue = [
-    [0, "#3D9970"],
-    [1, "#001f3f"],
+    [0, "#b1deb7"],
+    [1, "#0a5413"],
   ];
 
   return (
-    <Card sx={{ boxShadow: "1px 1px 8px #80808085" }}>
+    <Card sx={{ boxShadow: "1px 1px 8px #80808085", height: "300px" }}>
       <p style={{ textAlign: "center", fontSize: "25px", margin: "7px 0px" }}>
         Summary
       </p>
       <Plot
+        style={{ width: "100%" }}
         className="js-plotly-plot plotly main-svg"
-        data={[ 
+        data={[
           {
+            x: ["Z", "Y", "X"],
+            y: ["A", "B", "C"],
             z: [
               [1, 20, 30],
               [20, 1, 60],
@@ -35,15 +28,13 @@ const SummaryCard = () => {
             ],
             type: "heatmap",
             showscale: false,
-            // colorscale: colorscaleValue,
+            colorscale: colorscaleValue,
           },
         ]}
         layout={{
           height: 350,
-          // width: '100%',
-          // title: "hello",
         }}
-        // config={{ responsive: true }}
+        config={{ responsive: true }}
       />
     </Card>
   );

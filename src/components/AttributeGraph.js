@@ -3,19 +3,23 @@ import Plot from "react-plotly.js";
 import {
   Typography,
   FormControl,
-  FormLabel,
   RadioGroup,
   FormControlLabel,
   Radio,
   Card,
   Divider,
-  Box,
   Autocomplete,
   TextField,
 } from "@mui/material";
 const AttributeGraph = () => {
   return (
-    <Card sx={{ boxShadow: "1px 1px 8px #80808085", marginTop: "30px" }}>
+    <Card
+      sx={{
+        boxShadow: "1px 1px 8px #80808085",
+        marginTop: "30px",
+        height: "495px",
+      }}
+    >
       <Typography sx={{ padding: 2 }}>Attribute Graphs</Typography>
       <Divider />
       <FormControl sx={{ ml: "20px" }}>
@@ -55,18 +59,16 @@ const AttributeGraph = () => {
             label="0"
           />
         </RadioGroup>
-        
       </FormControl>
       <Autocomplete
-      
-          // fullWidth
-          size="small"
-          disablePortal
-          id="combo-box-demo"
-          options={[1, 2, 3, 4, 5, 6]}
-          sx={{ width: '100%',pl:'20px',pr:'20px' }}
-          renderInput={(params) => <TextField {...params} label="110-70 GM" />}
-        />
+        // fullWidth
+        size="small"
+        disablePortal
+        id="combo-box-demo"
+        options={[1, 2, 3, 4, 5, 6]}
+        sx={{ width: "100%", pl: "20px", pr: "20px" }}
+        renderInput={(params) => <TextField {...params} label="110-70 GM" />}
+      />
       <Plot
         style={{ Width: "100%" }}
         data={[
@@ -76,8 +78,8 @@ const AttributeGraph = () => {
             marker: { color: "red" },
             name: "Seasonality",
             type: "scatter",
-        },
-        {
+          },
+          {
             x: [1, 2, 3, 4, 5, 6, 7, 8],
             y: [1, 2, 36, 45, 5, 64, 7, 45],
             marker: { color: "blue" },
@@ -106,8 +108,7 @@ const AttributeGraph = () => {
             // title: "hello",
           }
         }
-        config={{responsive: true}}
-
+        config={{ responsive: true }}
       />
     </Card>
   );

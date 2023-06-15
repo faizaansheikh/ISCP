@@ -1,11 +1,19 @@
-import { Card, Divider, Typography, Box } from "@mui/material";
+import { Card, Divider, Typography } from "@mui/material";
 import React from "react";
 import Plot from "react-plotly.js";
 
 const IndexGraph = () => {
   return (
-    <Card sx={{ boxShadow: "1px 1px 8px #80808085", marginTop: "30px" }}>
-      <Typography sx={{ padding: 2,fontSize:'20px' }}>Gini Index Graph</Typography>
+    <Card
+      sx={{
+        boxShadow: "1px 1px 8px #80808085",
+        marginTop: "30px",
+        height: "435px",
+      }}
+    >
+      <Typography sx={{ padding: 2, fontSize: "20px" }}>
+        Gini Index Graph
+      </Typography>
       <Divider />
 
       <Plot
@@ -47,20 +55,18 @@ const IndexGraph = () => {
             type: "scatter",
           },
         ]}
-        layout={
-          {
-            yaxis: {
-                title: 'Percent of Total',
-            },
-            xaxis: {
-                title: 'Time Step'
-            }
-            // width: '100%',
-            // height: 600,
-            // title: "hello",
-          }
-        }
-        config={{responsive: true}}
+        layout={{
+          yaxis: {
+            title: "Percent of Total",
+          },
+          xaxis: {
+            title: "Time Step",
+          },
+          // width: '100%',
+          // height: 600,
+          // title: "hello",
+        }}
+        config={{ responsive: true }}
       />
     </Card>
   );
