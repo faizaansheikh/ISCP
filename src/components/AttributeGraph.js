@@ -13,6 +13,7 @@ import {
   TextField,
   Select,
   MenuItem,
+  Box,
 } from "@mui/material";
 const AttributeGraph = () => {
   const[drop,setDrop] = useState('')
@@ -47,7 +48,7 @@ const AttributeGraph = () => {
         </Select>
       </FormControl>
     </Box>
-      {/* <FormControl sx={{ ml: "20px" }}>
+     {/* <FormControl sx={{ ml: "20px" }}>
         <RadioGroup
           row
           aria-labelledby="demo-row-radio-buttons-group-label"
@@ -85,7 +86,7 @@ const AttributeGraph = () => {
           />
         </RadioGroup>
         
-      </FormControl>
+      </FormControl> */}
       <Autocomplete
         // fullWidth
         size="small"

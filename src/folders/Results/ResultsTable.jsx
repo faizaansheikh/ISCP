@@ -92,6 +92,8 @@ export default function BasicTable() {
                         backgroundColor: "#398585",
                         color: "white",
                         border: "1px solid white",
+                        whiteSpace: 'nowrap',
+                        padding: '10px'
                       }}
                     >
                       {elem}
@@ -119,7 +121,7 @@ export default function BasicTable() {
                   sx={{ "&:last-child td, &:last-child th": { border: '1px solid' } }}
                 >
                   {rows.map((elem) => (
-                    <TableCell sx={{border:'1px solid grey',textAlign:'center'}} >
+                    <TableCell sx={{ border: '1px solid grey', textAlign: 'center', whiteSpace: 'nowrap', p: '10px' }} >
                       {elem}
                     </TableCell>
                   ))}
@@ -130,7 +132,7 @@ export default function BasicTable() {
                   sx={{ "&:last-child td, &:last-child th": { border: '1px solid' } }}
                 >
                   {rows.map((elem) => (
-                    <TableCell sx={{border:'1px solid grey',textAlign:'center'}} >
+                    <TableCell sx={{ border: '1px solid grey', textAlign: 'center', whiteSpace: 'nowrap', p: '10px' }} >
                       {elem}
                     </TableCell>
                   ))}
@@ -141,7 +143,7 @@ export default function BasicTable() {
                   sx={{ "&:last-child td, &:last-child th": { border: '1px solid' } }}
                 >
                   {rows.map((elem) => (
-                    <TableCell sx={{border:'1px solid grey',textAlign:'center'}} >
+                    <TableCell sx={{ border: '1px solid grey', textAlign: 'center', whiteSpace: 'nowrap', p: '10px' }} >
                       {elem}
                     </TableCell>
                   ))}
@@ -152,7 +154,7 @@ export default function BasicTable() {
                   sx={{ "&:last-child td, &:last-child th": { border: '1px solid' } }}
                 >
                   {rows.map((elem) => (
-                    <TableCell sx={{border:'1px solid grey',textAlign:'center'}} >
+                    <TableCell sx={{ border: '1px solid grey', textAlign: 'center', whiteSpace: 'nowrap', p: '10px' }} >
                       {elem}
                     </TableCell>
                   ))}
@@ -163,7 +165,7 @@ export default function BasicTable() {
                   sx={{ "&:last-child td, &:last-child th": { border: '1px solid' } }}
                 >
                   {rows.map((elem) => (
-                    <TableCell sx={{border:'1px solid grey',textAlign:'center'}} >
+                    <TableCell sx={{ border: '1px solid grey', textAlign: 'center', whiteSpace: 'nowrap', p: '10px' }} >
                       {elem}
                     </TableCell>
                   ))}
@@ -194,7 +196,7 @@ export default function BasicTable() {
                   sx={{ "&:last-child td, &:last-child th": { border: '1px solid' } }}
                 >
                   {rows.map((elem) => (
-                    <TableCell sx={{border:'1px solid grey',textAlign:'center'}} >
+                    <TableCell sx={{ border: '1px solid grey', textAlign: 'center', whiteSpace: 'nowrap', p: '10px' }} >
                       {elem}
                     </TableCell>
                   ))}
@@ -205,7 +207,7 @@ export default function BasicTable() {
                   sx={{ "&:last-child td, &:last-child th": { border: '1px solid' } }}
                 >
                   {rows.map((elem) => (
-                    <TableCell sx={{border:'1px solid grey',textAlign:'center'}} >
+                    <TableCell sx={{ border: '1px solid grey', textAlign: 'center', whiteSpace: 'nowrap', p: '10px' }} >
                       {elem}
                     </TableCell>
                   ))}
@@ -216,7 +218,7 @@ export default function BasicTable() {
                   sx={{ "&:last-child td, &:last-child th": { border: '1px solid gray' } }}
                 >
                   {rows.map((elem) => (
-                    <TableCell sx={{border:'1px solid grey',textAlign:'center'}} >
+                    <TableCell sx={{ border: '1px solid grey', textAlign: 'center', whiteSpace: 'nowrap', p: '10px' }} >
                       {elem}
                     </TableCell>
                   ))}
