@@ -264,7 +264,9 @@ function Setup() {
           container
           rowSpacing={1}
           columnSpacing={{ xs: 1, sm: 1, md: 3 }}
-          sx={{ display: "flex", justifyContent: "center" }}
+          justify='center'
+          width='auto'
+          sx={{ mt:'33px' }}
         >
           <Grid item xs={12} md={4}>
             <Box

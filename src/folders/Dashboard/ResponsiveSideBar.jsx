@@ -1,41 +1,64 @@
-import * as React from 'react';
-import PropTypes from 'prop-types';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import CssBaseline from '@mui/material/CssBaseline';
-import Divider from '@mui/material/Divider';
-import Drawer from '@mui/material/Drawer';
-import IconButton from '@mui/material/IconButton';
+import * as React from "react";
+import PropTypes from "prop-types";
+import AppBar from "@mui/material/AppBar";
+import Box from "@mui/material/Box";
+import CssBaseline from "@mui/material/CssBaseline";
+import Divider from "@mui/material/Divider";
+import Drawer from "@mui/material/Drawer";
+import IconButton from "@mui/material/IconButton";
 // import InboxIcon from '@mui/icons-material/MoveToInbox';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-// import MailIcon from '@mui/icons-material/Mail';
-// import MenuIcon from '@mui/icons-material/Menu';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import Setup from '../Setups/Setup';
-import Results from '../Results/Results';
-import { Button } from '@mui/material';
-
+import List from "@mui/material/List";
+import logo from "../Dashboard/logo.png";
+import CloseIcon from "@mui/icons-material/Close";
+import GridOnIcon from "@mui/icons-material/GridOn";
+import SettingsIcon from "@mui/icons-material/Settings";
+import Toolbar from "@mui/material/Toolbar";
+import Typography from "@mui/material/Typography";
+import Setup from "../Setups/Setup";
+import Results from "../Results/Results";
+import { Button } from "@mui/material";
+import { makeStyles } from "@mui/styles";
+import MenuIcon from "@mui/icons-material/Menu";
 const drawerWidth = 270;
 
+const useStyles = makeStyles((theme) => ({
+  container: {
+    display: "flex",
+    justifyContent: "flex-end",
+    padding: "10px 20px 0px 0px",
+    color: "white",
+  },
+}));
+
 function ResponsiveDrawer(props) {
+  const classes = useStyles();
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
-  const [menuData, setMenuData] = React.useState("setup");
+  const [menuData, setMenuData] = React.useState("result");
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
 
   const drawer = (
     <div>
-      <Toolbar />
+      <div className={classes.container}>
+      <IconButton
+        color="inherit"
+        aria-label="open drawer"
+        edge="end"
+        display='end'
+        onClick={handleDrawerToggle}
+        className={classes.container}
+        // sx={{ display:'flex',justifyContent:'end',alignItems:'end' }}
+      >
+        <CloseIcon onClick={() => setMobileOpen(false)} />
+      </IconButton>
+      </div>
+
+      {/* <Toolbar /> */}
       <Divider />
       <List>
-      <Box sx={{ overflow: "auto", bgcolor: "#398585" }}>
+        <Box sx={{ overflow: "auto", bgcolor: "#398585" }}>
           <List>
             <Box
               sx={{
@@ -53,7 +76,8 @@ function ResponsiveDrawer(props) {
                   p: "10px",
                 }}
               >
-                {/* <InboxIcon /> */}
+                <SettingsIcon sx={{ fontSize: "20px", color: "white" }} />
+
                 <Button
                   sx={{ color: "white" }}
                   onClick={() => setMenuData("setup")}
@@ -70,6 +94,7 @@ function ResponsiveDrawer(props) {
                 }}
               >
                 {/* <InboxIcon /> */}
+                <GridOnIcon sx={{ fontSize: "18px", color: "white" }} />
                 <Button
                   sx={{ color: "white" }}
                   onClick={() => setMenuData("result")}
@@ -83,25 +108,14 @@ function ResponsiveDrawer(props) {
         </Box>
       </List>
       <Divider />
-      {/* <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List> */}
     </div>
   );
 
-  const container = window !== undefined ? () => window().document.body : undefined;
+  const container =
+    window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box sx={{ display: "flex" }}>
       <CssBaseline />
       <AppBar
         position="fixed"
@@ -110,17 +124,28 @@ function ResponsiveDrawer(props) {
           ml: { sm: `${drawerWidth}px` },
         }}
       >
-        <Toolbar sx={{ bgcolor: '#398585' }}>
+        <Toolbar sx={{ bgcolor: "#398585" }}>
           <IconButton
             color="inherit"
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' } }}
+            sx={{ mr: 2, display: { sm: "none" } }}
           >
-            {/* <MenuIcon /> */}
+            <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap component="div">
+          <img
+            src={logo}
+            style={{ paddingRight: "3px", width: "37px" }}
+            alt=""
+          />
+
+          <Typography
+            variant="h6"
+            sx={{ fontSize: "15px" }}
+            noWrap
+            component="div"
+          >
             ISCP Integrated Supply Chain Planning
           </Typography>
         </Toolbar>
@@ -140,8 +165,12 @@ function ResponsiveDrawer(props) {
             keepMounted: true, // Better open performance on mobile.
           }}
           sx={{
-            display: { xs: 'block', sm: 'none' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, bgcolor: '#398585' },
+            display: { xs: "block", sm: "none" },
+            "& .MuiDrawer-paper": {
+              boxSizing: "border-box",
+              width: drawerWidth,
+              bgcolor: "#398585",
+            },
           }}
         >
           {drawer}
@@ -149,8 +178,11 @@ function ResponsiveDrawer(props) {
         <Drawer
           variant="permanent"
           sx={{
-            display: { xs: 'none', sm: 'block' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+            display: { xs: "none", sm: "block" },
+            "& .MuiDrawer-paper": {
+              boxSizing: "border-box",
+              width: drawerWidth,
+            },
           }}
           open
         >
@@ -159,7 +191,11 @@ function ResponsiveDrawer(props) {
       </Box>
       <Box
         component="main"
-        sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
+        sx={{
+          flexGrow: 1,
+          p: 3,
+          width: { sm: `calc(100% - ${drawerWidth}px)` },
+        }}
       >
         <Toolbar />
         {menuData == "setup" && <Setup />}

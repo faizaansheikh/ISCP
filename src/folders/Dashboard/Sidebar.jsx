@@ -7,33 +7,33 @@ import Toolbar from "@mui/material/Toolbar";
 import List from "@mui/material/List";
 import Typography from "@mui/material/Typography";
 import Divider from "@mui/material/Divider";
-// import ListItem from "@mui/material/ListItem";
-// import ListItemButton from "@mui/material/ListItemButton";
-// import ListItemIcon from "@mui/material/ListItemIcon";
-// import ListItemText from "@mui/material/ListItemText";
-// import InboxIcon from "@mui/icons-material/MoveToInbox";
-// import MailIcon from "@mui/icons-material/Mail";
+import SettingsIcon from '@mui/icons-material/Settings';
 import Setup from "../Setups/Setup";
 import { Button } from "@mui/material";
 import Results from "../Results/Results";
 import Graph from "../Graph/Graph";
+import GridOnIcon from '@mui/icons-material/GridOn';
+import logo from '../Dashboard/logo.png'
 const drawerWidth = 255;
 
 export default function ClippedDrawer() {
-  const [menuData, setMenuData] = React.useState("setup");
+  const [menuData, setMenuData] = React.useState("result");
 
   return (
     <Box sx={{ display: "flex", bgcolor: "#398585 !imporant" }}>
       <CssBaseline />
       <AppBar
         position="fixed"
-        sx={{ zIndex: (theme) => theme.zIndex.drawer + 1, bgcolor: "#398585", display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', padding: '0px 20px' }}
+        sx={{ zIndex: (theme) => theme.zIndex.drawer + 1, bgcolor: "#398585", display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', p: '0px 20px' }}
       >
-        <Toolbar>
-          <Typography variant="h6" noWrap component="div">
+        <Box sx={{display: 'flex', flexDirection: 'row', alignItems: 'center'}}>
+        
+         <img src={logo}  style={{paddingRight:'5px',width:'60px'}}  alt="" />
+          <Typography variant="h6" noWrap component="div" sx={{pt:'17px',pb:'17px'}}>
             ISCP - Integrated Supply Chain Planning
           </Typography>
-        </Toolbar>
+        
+        </Box>
 
         {
           menuData === 'result' ? <p style={{ fontSize: '18px', margin: '0px' }}>ABC/XYZ Analysis</p> : <p style={{ fontSize: '18px', margin: '0px' }}>Segmentation Setup</p>
@@ -73,6 +73,7 @@ export default function ClippedDrawer() {
                 }}
               >
                 {/* <InboxIcon /> */}
+                <SettingsIcon sx={{fontSize:'20px'}}/>
                 <Button
                   sx={{ color: "white" }}
                   onClick={() => setMenuData("setup")}
@@ -89,6 +90,7 @@ export default function ClippedDrawer() {
                 }}
               >
                 {/* <InboxIcon /> */}
+                <GridOnIcon sx={{fontSize:'18px'}}/>
                 <Button
                   sx={{ color: "white" }}
                   onClick={() => setMenuData("result")}

@@ -1,4 +1,4 @@
-import { Card, Divider, Typography, Box } from "@mui/material";
+import { Card, Divider, Typography, Box, FormControl, FormLabel, RadioGroup, FormControlLabel, Radio } from "@mui/material";
 import React from "react";
 import Plot from "react-plotly.js";
 
@@ -6,8 +6,19 @@ const TimeSeriesGraph = () => {
   return (
     <Card sx={{ boxShadow: "1px 1px 8px #80808085", marginTop: "50px" }}>
       <Typography sx={{ padding: 2 }}>TimeSeries of Selected data</Typography>
+      
+      
       <Divider />
-
+      <FormControl sx={{ml:'20px'}}>
+      <RadioGroup
+        row
+        aria-labelledby="demo-row-radio-buttons-group-label"
+        name="row-radio-buttons-group"
+      >
+        <FormControlLabel value="COGS" control={<Radio />} label="COGS" />
+        <FormControlLabel value="Demand" control={<Radio />} label="Demand" />
+      </RadioGroup>
+    </FormControl>
       <Plot
         style={{ Width: "100%" }}
         data={[
